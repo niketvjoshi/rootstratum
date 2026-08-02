@@ -42,19 +42,6 @@ jobs:
         env:
           NODE_ENV: production
 
-      - name: Debug OIDC token claims
-        id: oidc-debug
-        run: |
-          TOKEN=$(curl -sSf -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
-            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sts.amazonaws.com" | jq -r '.value')
-          echo "Token received (first 20 chars): ${TOKEN:0:20}"
-          # Decode payload (base64url middle segment)
-          PAYLOAD=$(echo "$TOKEN" | cut -d. -f2 | tr '_-' '/+' | \
-            awk '{ pad=4-length($0)%4; if(pad<4){for(i=0;i<pad;i++) $0=$0"="} print }' | base64 -d 2>/dev/null)
-          echo "sub: $(echo "$PAYLOAD" | jq -r '.sub // "missing"')"
-          echo "aud: $(echo "$PAYLOAD" | jq -r '.aud // "missing"')"
-          echo "iss: $(echo "$PAYLOAD" | jq -r '.iss // "missing"')"
-
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
