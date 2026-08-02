@@ -129,7 +129,7 @@ export default function Platform() {
             <div style={{ fontSize: 20, fontWeight: 800, color: "#f1f5f9", marginBottom: 4 }}>Ready to see OCCRA in action?</div>
             <p style={{ color: "#94a3b8", fontSize: 14, margin: 0 }}>Get a personalised demo tailored to your stack and team size.</p>
           </div>
-          <a href="#contact" className="btn-primary">Request a Demo →</a>
+          <a href="#contact-form" className="btn-primary">Request a Demo →</a>
         </div>
       </div>
     </section>

@@ -20,21 +20,21 @@ export default function Footer() {
                 </defs>
               </svg>
               <span style={{ fontWeight: 800, fontSize: 16, color: "#f1f5f9" }}>
-                rootstratum<span style={{ color: "#22d3ee" }}>.</span>
+                rootstratum
               </span>
             </div>
             <p style={{ color: "#475569", fontSize: 13, lineHeight: 1.75, maxWidth: 280, marginBottom: 20 }}>
-              Your trusted partner for Cloud Architecture, DevOps Engineering, and AIOps. A specialist team with deep, production-grade expertise across AWS, GCP and Azure.
+              Your trusted partner for Cloud Architecture, DevOps, DevSecOps, and AIOps. A specialist team with deep, production-grade expertise across AWS, GCP and Azure.
             </p>
-            <a href="mailto:hello@rootstratum.com" style={{ fontSize: 13, color: "#22d3ee", textDecoration: "none" }}>
-              hello@rootstratum.com
+            <a href="mailto:sales@rootstratum.com" style={{ fontSize: 13, color: "#22d3ee", textDecoration: "none" }}>
+              sales@rootstratum.com
             </a>
           </div>
 
           {/* Services */}
           <div>
             <div style={{ fontSize: 11, fontWeight: 800, color: "#f1f5f9", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 18 }}>Services</div>
-            {["DevOps Engineering", "Cloud Architecture", "Cloud Migration", "Cost Optimisation", "AIOps (OCCRA)", "Cloud Security"].map(l => (
+            {["DevOps Engineering", "DevSecOps", "Cloud Architecture", "Cloud Migration", "Cost Optimisation", "AIOps (OCCRA)"].map(l => (
               <a key={l} href="#services" style={{
                 display: "block", color: "#475569", fontSize: 13,
                 textDecoration: "none", marginBottom: 10, transition: "color 0.2s",
@@ -62,10 +62,10 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <div style={{ fontSize: 11, fontWeight: 800, color: "#f1f5f9", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 18 }}>Contact</div>
-            <a href="mailto:hello@rootstratum.com" style={{ display: "block", color: "#475569", fontSize: 13, textDecoration: "none", marginBottom: 10 }}>
-              hello@rootstratum.com
+            <a href="mailto:sales@rootstratum.com" style={{ display: "block", color: "#475569", fontSize: 13, textDecoration: "none", marginBottom: 10 }}>
+              sales@rootstratum.com
             </a>
-            <a href="#contact" style={{ display: "block", color: "#475569", fontSize: 13, textDecoration: "none", marginBottom: 10, transition: "color 0.2s" }}
+            <a href="#contact-form" style={{ display: "block", color: "#475569", fontSize: 13, textDecoration: "none", marginBottom: 10, transition: "color 0.2s" }}
               onMouseEnter={e => (e.currentTarget.style.color = "#94a3b8")}
               onMouseLeave={e => (e.currentTarget.style.color = "#475569")}
             >Send a Message</a>

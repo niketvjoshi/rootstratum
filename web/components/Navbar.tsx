@@ -44,7 +44,7 @@ export default function Navbar() {
             </defs>
           </svg>
           <span style={{ fontWeight: 800, fontSize: 16, color: "#f1f5f9", letterSpacing: "-0.3px" }}>
-            rootstratum<span style={{ color: "#22d3ee" }}>.</span>
+            rootstratum
           </span>
         </a>
 

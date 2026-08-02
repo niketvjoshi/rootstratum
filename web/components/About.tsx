@@ -58,7 +58,7 @@ export default function About() {
               Our engineers bring deep specialisations across platform engineering, cloud architecture, SRE, FinOps, and AIOps — so every engagement gets the right expert, not a generalist wearing multiple hats.
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-              <a href="#contact" className="btn-primary">Work with Our Team</a>
+              <a href="#contact-form" className="btn-primary">Work with Our Team</a>
               <a href="#services" className="btn-outline">View All Services</a>
             </div>
 
