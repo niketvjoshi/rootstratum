@@ -96,12 +96,16 @@ export default function About() {
                 padding: "4px 12px", borderRadius: "0 14px 0 8px",
               }}>Founder</div>
 
-              <div style={{
-                width: 52, height: 52, borderRadius: "50%",
-                background: "linear-gradient(135deg, #22d3ee 0%, #0e7490 100%)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: 20, fontWeight: 900, color: "#07091a", marginBottom: 16,
-              }}>NJ</div>
+              <img
+                src="/niket.jpg"
+                alt="Niket Joshi"
+                style={{
+                  width: 64, height: 64, borderRadius: "50%",
+                  objectFit: "cover",
+                  border: "2px solid rgba(34,211,238,0.4)",
+                  marginBottom: 16,
+                }}
+              />
 
               <div style={{ fontSize: 18, fontWeight: 800, color: "#f1f5f9", marginBottom: 4 }}>Niket Joshi</div>
               <div style={{ fontSize: 12, fontWeight: 700, color: "#22d3ee", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 12 }}>
