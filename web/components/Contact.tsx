@@ -11,6 +11,8 @@ const trust = [
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const inputStyle: React.CSSProperties = {
     width: "100%", padding: "13px 16px",
@@ -84,7 +86,27 @@ export default function Contact() {
           ) : (
             <>
               <h3 style={{ fontSize: 22, fontWeight: 800, color: "#f1f5f9", marginBottom: 32, letterSpacing: "-0.5px" }}>Send us a message</h3>
-              <form onSubmit={e => { e.preventDefault(); setSent(true); }} style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+              <form onSubmit={async e => {
+                e.preventDefault();
+                setLoading(true);
+                setError("");
+                try {
+                  const res = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(form),
+                  });
+                  if (!res.ok) {
+                    const d = await res.json().catch(() => ({}));
+                    throw new Error(d.error || "Something went wrong");
+                  }
+                  setSent(true);
+                } catch (err: unknown) {
+                  setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+                } finally {
+                  setLoading(false);
+                }
+              }} style={{ display: "flex", flexDirection: "column", gap: 18 }}>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                   <div>
                     <label style={{ display: "block", fontSize: 11, fontWeight: 700, color: "#64748b", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.08em" }}>Name</label>
@@ -116,8 +138,12 @@ export default function Contact() {
                     onFocus={e => (e.target.style.borderColor = "rgba(34,211,238,0.5)")}
                     onBlur={e => (e.target.style.borderColor = "rgba(34,211,238,0.15)")} />
                 </div>
-                <button type="submit" className="btn-primary" style={{ alignSelf: "flex-start" }}>
-                  Send Message →
+                {error && (
+                  <p style={{ fontSize: 13, color: "#f87171", margin: 0 }}>{error}</p>
+                )}
+                <button type="submit" disabled={loading} className="btn-primary"
+                  style={{ alignSelf: "flex-start", opacity: loading ? 0.7 : 1 }}>
+                  {loading ? "Sending…" : "Send Message →"}
                 </button>
               </form>
             </>
