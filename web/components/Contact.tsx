@@ -76,6 +76,7 @@ export default function Contact() {
           border: "1px solid rgba(34,211,238,0.1)",
           borderRadius: 16, padding: "48px",
           maxWidth: 720, margin: "0 auto",
+          scrollMarginTop: 88,
         }}>
           {sent ? (
             <div style={{ textAlign: "center", padding: "40px 0" }}>
