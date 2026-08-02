@@ -42,6 +42,35 @@ const plans = [
     cta: "Let's Talk →",
     popular: false,
   },
+  {
+    emoji: "⚙️",
+    name: "Managed Services",
+    meta: "Ongoing · SLA-backed",
+    desc: "We run your cloud and platform infrastructure end-to-end — monitoring, incident response, patching, and continuous optimisation — so your team can focus on product.",
+    bullets: [
+      "24×7 monitoring & alerting",
+      "Incident response & RCA",
+      "Patch management & upgrades",
+      "Monthly cost & security review",
+      "Defined SLA with escalation path",
+    ],
+    cta: "Discuss Requirements →",
+    popular: false,
+  },
+  {
+    emoji: "🕐",
+    name: "Time & Materials",
+    meta: "Flexible · Pay as you go",
+    desc: "Need expert hours without a long commitment? Engage us on a T&M basis for audits, troubleshooting, architecture reviews, or ad-hoc engineering work.",
+    bullets: [
+      "Billed per hour, no minimums",
+      "Senior engineer on every ticket",
+      "Ideal for one-off audits & reviews",
+      "Quick start — no long SOW needed",
+    ],
+    cta: "Get a Quote →",
+    popular: false,
+  },
 ];
 
 export default function Engagement() {
