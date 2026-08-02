@@ -9,7 +9,7 @@ const highlights = [
   },
   {
     title: "AI-Driven Operations",
-    desc: "We built OCCRA — our own AIOps platform — on top of Claude LLM and MCP Servers, and run ML-powered auto-scaling that predicts traffic before it spikes.",
+    desc: "We built OCCRA — our own AIOps platform — powered by large language models and intelligent automation, with ML-powered auto-scaling that predicts traffic before it spikes.",
   },
 ];
 

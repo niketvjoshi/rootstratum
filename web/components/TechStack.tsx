@@ -29,7 +29,7 @@ const categories = [
   },
   {
     label: "AIOps",
-    items: ["OCCRA", "OpenTelemetry", "MLflow", "Claude LLM"],
+    items: ["OCCRA", "OpenTelemetry", "MLflow", "Bedrock LLM"],
   },
 ];
 

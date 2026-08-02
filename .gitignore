@@ -19,5 +19,7 @@ node_modules/
 # OS
 .DS_Store
 
-# Claude Code
+# Local config
 .claude/
+web/AGENTS.md
+web/CLAUDE.md
