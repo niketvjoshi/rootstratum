@@ -69,10 +69,10 @@ export default function Footer() {
               onMouseEnter={e => (e.currentTarget.style.color = "#94a3b8")}
               onMouseLeave={e => (e.currentTarget.style.color = "#475569")}
             >Send a Message</a>
-            <a href="https://linkedin.com" style={{ display: "block", color: "#475569", fontSize: 13, textDecoration: "none", transition: "color 0.2s" }}
+            <a href="https://www.linkedin.com/in/niket-joshi-03b3a524/" target="_blank" rel="noopener noreferrer" style={{ display: "block", color: "#475569", fontSize: 13, textDecoration: "none", transition: "color 0.2s" }}
               onMouseEnter={e => (e.currentTarget.style.color = "#94a3b8")}
               onMouseLeave={e => (e.currentTarget.style.color = "#475569")}
-            >LinkedIn</a>
+            >LinkedIn — Niket Joshi</a>
           </div>
         </div>
 

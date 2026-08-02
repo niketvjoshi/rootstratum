@@ -1,15 +1,15 @@
 const highlights = [
   {
-    title: "OTT-Scale Experience",
-    desc: "Our team has built infrastructure serving millions of concurrent users during live cricket events and high-stakes media streams — zero tolerance for downtime.",
+    title: "OTT-Scale Live Event Infrastructure",
+    desc: "Designed and operated mixed Spot + On-Demand Kubernetes clusters serving one of cricket's highest-concurrent-viewer streaming events — zero incidents, elastic at peak, cost-optimised throughout.",
   },
   {
-    title: "FinOps Champions",
-    desc: "Our engineers have reduced cloud spend by 40%+ for multiple clients through Graviton migrations, Spot fleet management, and structured reserved capacity planning.",
+    title: "₹1.5 Crore FinOps Win",
+    desc: "Cut annual AWS spend by over ₹1.5 crore for a global media network's India streaming division through Graviton migration, Spot fleet management, and structured reserved capacity planning.",
   },
   {
-    title: "AI-Driven Operations",
-    desc: "We built OCCRA — our own AIOps platform — powered by large language models and intelligent automation, with ML-powered auto-scaling that predicts traffic before it spikes.",
+    title: "17+ Years Under the Hood",
+    desc: "Not consulting experience — hands-on production engineering across media, fintech, and enterprise on AWS, GCP, and Azure. The kind of experience that knows what breaks at 3am and why.",
   },
 ];
 
@@ -22,15 +22,6 @@ const expertise = [
   { label: "Observability Stack",            sub: "LGTM · Prometheus" },
   { label: "Cloud Security & Compliance",    sub: "IAM · WAF · Vault" },
   { label: "FinOps & Cost Optimisation",     sub: "30–60% savings" },
-];
-
-const team = [
-  { role: "Platform Engineering Lead",   bg: "10+ yrs — EKS, IDP, Backstage" },
-  { role: "Cloud Architect",             bg: "AWS SA Pro — multi-cloud landing zones" },
-  { role: "DevOps & SRE Engineer",       bg: "GitOps, CI/CD pipelines, incident mgmt" },
-  { role: "DevSecOps Engineer",          bg: "SAST, DAST, container scanning, SOC2" },
-  { role: "FinOps Specialist",           bg: "Graviton, Spot fleets, cost governance" },
-  { role: "AIOps Engineer",              bg: "ML scaling, OCCRA, OpenTelemetry" },
 ];
 
 export default function About() {
@@ -52,10 +43,14 @@ export default function About() {
               <span className="italic-accent">production-grade infrastructure</span>
             </h2>
             <p style={{ color: "#94a3b8", fontSize: 16, lineHeight: 1.8, marginBottom: 20 }}>
-              Rootstratum is a team of senior cloud and platform engineers who have spent years operating infrastructure at hyperscaler scale. We&apos;ve seen what breaks under pressure — and we build systems that don&apos;t.
+              Rootstratum is founded by senior cloud and platform engineers who have spent years
+              operating infrastructure at hyperscaler scale. We've seen what breaks under
+              pressure — and we build systems that don't.
             </p>
             <p style={{ color: "#94a3b8", fontSize: 16, lineHeight: 1.8, marginBottom: 36 }}>
-              Our engineers bring deep specialisations across platform engineering, cloud architecture, SRE, FinOps, and AIOps — so every engagement gets the right expert, not a generalist wearing multiple hats.
+              We bring deep specialisations across platform engineering, cloud architecture,
+              SRE, FinOps, DevSecOps, and AIOps — so every engagement gets the right
+              expert, not a generalist wearing multiple hats.
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <a href="#contact-form" className="btn-primary">Work with Our Team</a>
@@ -95,46 +90,129 @@ export default function About() {
           </div>
         </div>
 
-        {/* Team grid */}
+        {/* Founding Team */}
         <div>
           <div style={{ marginBottom: 32 }}>
-            <div className="label">Our Team</div>
+            <div className="label">Founding Team</div>
             <h3 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 900, letterSpacing: "-1px", color: "#f1f5f9", lineHeight: 1.15 }}>
               Specialists, not generalists
             </h3>
             <p style={{ color: "#94a3b8", fontSize: 15, marginTop: 10, maxWidth: 520 }}>
-              Each client engagement is staffed with engineers who have deep domain expertise in what you actually need — not whoever is available.
+              We're building a founding team of three senior engineers. Every client engagement
+              is led by a founder — not delegated to a junior.
             </p>
           </div>
 
           <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(290px, 1fr))",
-            gap: 1, background: "rgba(34,211,238,0.06)",
-            border: "1px solid rgba(34,211,238,0.1)", borderRadius: 14, overflow: "hidden",
+            display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+            gap: 20,
           }}>
-            {team.map((m, i) => (
-              <div key={m.role} style={{
-                padding: "24px 24px",
-                borderRight: "1px solid rgba(34,211,238,0.08)",
-                borderBottom: "1px solid rgba(34,211,238,0.08)",
-                display: "flex", alignItems: "flex-start", gap: 14,
-              }}>
-                <div style={{
-                  width: 38, height: 38, borderRadius: "50%",
-                  background: `hsl(${190 + i * 20}, 60%, 18%)`,
-                  border: "1px solid rgba(34,211,238,0.2)",
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  fontSize: 13, fontWeight: 800, color: "#22d3ee", flexShrink: 0,
-                }}>
-                  {m.role.split(" ").map(w => w[0]).slice(0, 2).join("")}
-                </div>
-                <div>
-                  <div style={{ fontSize: 14, fontWeight: 700, color: "#f1f5f9", marginBottom: 4 }}>{m.role}</div>
-                  <div style={{ fontSize: 12, color: "#64748b" }}>{m.bg}</div>
-                </div>
+            {/* Niket — real founder card */}
+            <div style={{
+              background: "rgba(34,211,238,0.04)",
+              border: "1px solid rgba(34,211,238,0.25)",
+              borderRadius: 14, padding: "32px 28px",
+              position: "relative", overflow: "hidden",
+            }}>
+              <div style={{
+                position: "absolute", top: 0, right: 0,
+                fontSize: 9, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase",
+                color: "#07091a", background: "#22d3ee",
+                padding: "4px 12px", borderRadius: "0 14px 0 8px",
+              }}>Founder</div>
+
+              <div style={{
+                width: 52, height: 52, borderRadius: "50%",
+                background: "linear-gradient(135deg, #22d3ee 0%, #0e7490 100%)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: 20, fontWeight: 900, color: "#07091a", marginBottom: 16,
+              }}>NJ</div>
+
+              <div style={{ fontSize: 18, fontWeight: 800, color: "#f1f5f9", marginBottom: 4 }}>Niket Joshi</div>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#22d3ee", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 12 }}>
+                Founder & CEO
               </div>
-            ))}
+              <p style={{ fontSize: 13, color: "#94a3b8", lineHeight: 1.7, marginBottom: 20 }}>
+                17+ years building production infrastructure at scale — OTT live events,
+                FinOps, Kubernetes, multi-cloud architecture. Led cloud engineering for
+                some of India's highest-traffic streaming workloads.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/niket-joshi-03b3a524/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex", alignItems: "center", gap: 6,
+                  fontSize: 12, fontWeight: 700, color: "#22d3ee",
+                  textDecoration: "none", letterSpacing: "0.04em",
+                }}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                LinkedIn Profile
+              </a>
+            </div>
+
+            {/* Co-founder 2 — coming soon */}
+            <div style={{
+              background: "rgba(14,19,38,0.5)",
+              border: "1px solid rgba(34,211,238,0.08)",
+              borderRadius: 14, padding: "32px 28px",
+              display: "flex", flexDirection: "column", justifyContent: "center",
+              minHeight: 260,
+            }}>
+              <div style={{
+                width: 52, height: 52, borderRadius: "50%",
+                border: "1.5px dashed rgba(34,211,238,0.3)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                marginBottom: 16,
+              }}>
+                <svg width="20" height="20" fill="none" stroke="rgba(34,211,238,0.4)" strokeWidth="1.5" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              </div>
+              <div style={{ fontSize: 15, fontWeight: 700, color: "#475569", marginBottom: 6 }}>Co-Founder · Platform Engineering</div>
+              <div style={{
+                fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase",
+                color: "#334155", background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.06)", borderRadius: 4, padding: "4px 10px",
+                display: "inline-block", marginBottom: 14,
+              }}>Joining Soon</div>
+              <p style={{ fontSize: 12, color: "#334155", lineHeight: 1.65 }}>
+                Senior platform engineer with deep EKS and IDP experience. Finalising details.
+              </p>
+            </div>
+
+            {/* Co-founder 3 — coming soon */}
+            <div style={{
+              background: "rgba(14,19,38,0.5)",
+              border: "1px solid rgba(34,211,238,0.08)",
+              borderRadius: 14, padding: "32px 28px",
+              display: "flex", flexDirection: "column", justifyContent: "center",
+              minHeight: 260,
+            }}>
+              <div style={{
+                width: 52, height: 52, borderRadius: "50%",
+                border: "1.5px dashed rgba(34,211,238,0.3)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                marginBottom: 16,
+              }}>
+                <svg width="20" height="20" fill="none" stroke="rgba(34,211,238,0.4)" strokeWidth="1.5" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              </div>
+              <div style={{ fontSize: 15, fontWeight: 700, color: "#475569", marginBottom: 6 }}>Co-Founder · Cloud Security & DevSecOps</div>
+              <div style={{
+                fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase",
+                color: "#334155", background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.06)", borderRadius: 4, padding: "4px 10px",
+                display: "inline-block", marginBottom: 14,
+              }}>Joining Soon</div>
+              <p style={{ fontSize: 12, color: "#334155", lineHeight: 1.65 }}>
+                Security and compliance specialist — zero-trust, SOC2, AWS Control Tower. Joining Q3 2026.
+              </p>
+            </div>
           </div>
         </div>
       </div>

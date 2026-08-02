@@ -90,7 +90,7 @@ export default function Hero() {
             {/* Stats */}
             <div className="fade-up d4" style={{ display: "flex", gap: 0, borderTop: "1px solid rgba(34,211,238,0.1)", paddingTop: 36, flexWrap: "wrap" }}>
               {[
-                { value: "16+",    label: "Years of Experience" },
+                { value: "17+",    label: "Years of Experience" },
                 { value: "50+",    label: "Projects Delivered" },
                 { value: "40%",    label: "Avg. Cloud Cost Saved" },
                 { value: "99.99%", label: "Uptime Guaranteed" },
