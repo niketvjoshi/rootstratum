@@ -4,7 +4,7 @@ import { useState } from "react";
 const CALENDLY = "https://calendly.com/rootstratum-sales/30min";
 
 const trust = [
-  "17+ years of hands-on production experience",
+  "Senior engineers on every engagement — not juniors",
   "Direct access to the founder — not an account manager",
   "Reply within 1 business day",
   "No pitch decks. Just an honest conversation.",

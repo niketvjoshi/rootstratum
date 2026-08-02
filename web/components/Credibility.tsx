@@ -14,7 +14,7 @@ const achievements = [
   {
     metric: "17+ Years",
     label: "Production-Grade Infrastructure",
-    desc: "Our founder has spent 17+ years building and operating infrastructure at hyperscaler scale — across media, fintech, and enterprise — on AWS, GCP, and Azure. Not advisory experience. Hands-on, in production, under pressure.",
+    desc: "Built and operated infrastructure across media, fintech, and enterprise — on AWS, GCP, and Azure. Not advisory experience. Hands-on, in production, under pressure.",
     tag: "Multi-Cloud · Platform Engineering",
   },
 ];
@@ -44,7 +44,7 @@ export default function Credibility() {
         </div>
         <p style={{ color: "#64748b", fontSize: 15, maxWidth: 620, marginBottom: 64, lineHeight: 1.7 }}>
           We haven't launched with a polished client list — we're building that with you.
-          What we bring is 17+ years of hands-on experience at production scale, with numbers that speak plainly.
+          What we bring is deep, hands-on experience at production scale, with numbers that speak plainly.
         </p>
 
         {/* Achievement cards */}
