@@ -130,7 +130,7 @@ export default function About() {
 
               <div style={{ fontSize: 18, fontWeight: 800, color: "#f1f5f9", marginBottom: 4 }}>Niket Joshi</div>
               <div style={{ fontSize: 12, fontWeight: 700, color: "#22d3ee", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 12 }}>
-                Founder & CEO
+                Founder & CEO · DevOps & Platform Engineering
               </div>
               <p style={{ fontSize: 13, color: "#94a3b8", lineHeight: 1.7, marginBottom: 20 }}>
                 17+ years building production infrastructure at scale — OTT live events,
@@ -172,7 +172,7 @@ export default function About() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>
               </div>
-              <div style={{ fontSize: 15, fontWeight: 700, color: "#475569", marginBottom: 6 }}>Co-Founder · Platform Engineering</div>
+              <div style={{ fontSize: 15, fontWeight: 700, color: "#475569", marginBottom: 6 }}>Co-Founder · DevOps, DevSecOps &amp; Multi-Cloud</div>
               <div style={{
                 fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase",
                 color: "#334155", background: "rgba(255,255,255,0.04)",
@@ -180,7 +180,7 @@ export default function About() {
                 display: "inline-block", marginBottom: 14,
               }}>Joining Soon</div>
               <p style={{ fontSize: 12, color: "#334155", lineHeight: 1.65 }}>
-                Senior platform engineer with deep EKS and IDP experience. Finalising details.
+                Senior engineer across DevOps, DevSecOps and multi-cloud deployments. Finalising details.
               </p>
             </div>
 
@@ -202,7 +202,7 @@ export default function About() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>
               </div>
-              <div style={{ fontSize: 15, fontWeight: 700, color: "#475569", marginBottom: 6 }}>Co-Founder · Cloud Security & DevSecOps</div>
+              <div style={{ fontSize: 15, fontWeight: 700, color: "#475569", marginBottom: 6 }}>Co-Founder · Email Marketing</div>
               <div style={{
                 fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase",
                 color: "#334155", background: "rgba(255,255,255,0.04)",
@@ -210,7 +210,7 @@ export default function About() {
                 display: "inline-block", marginBottom: 14,
               }}>Joining Soon</div>
               <p style={{ fontSize: 12, color: "#334155", lineHeight: 1.65 }}>
-                Security and compliance specialist — zero-trust, SOC2, AWS Control Tower. Joining Q3 2026.
+                Growth and demand generation specialist — email campaigns, nurture flows, and B2B outreach. Joining soon.
               </p>
             </div>
           </div>
