@@ -65,7 +65,7 @@ export default function Hero() {
             <div className="fade-up" style={{ marginBottom: 28 }}>
               <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#94a3b8" }}>
                 <span style={{ color: "#22d3ee", marginRight: 10 }}>●</span>
-                Cloud · Platform Engineering · AIOps &nbsp;·&nbsp; India &amp; Global
+                Cloud · DevOps · DevSecOps · Platform Engineering · AIOps &nbsp;·&nbsp; India &amp; Global
               </span>
             </div>
 
@@ -83,7 +83,7 @@ export default function Hero() {
             </p>
 
             <div className="fade-up d3" style={{ display: "flex", gap: 14, flexWrap: "wrap", marginBottom: 64 }}>
-              <a href="#contact" className="btn-primary">Let&apos;s Connect →</a>
+              <a href="#contact-form" className="btn-primary">Let&apos;s Connect →</a>
               <a href="#services" className="btn-outline">View Services</a>
             </div>
 

@@ -2,12 +2,13 @@
 
 const services = [
   {
-    title: "Platform Engineering",
-    desc: "We build the golden path your developers actually use — Internal Developer Platforms, self-service infrastructure, and paved-road CI/CD that eliminates toil and accelerates every team.",
+    title: "DevOps & Platform Engineering",
+    desc: "We build the golden path your developers actually use — CI/CD pipelines, Internal Developer Platforms, self-service infrastructure, and GitOps workflows that eliminate toil and ship faster.",
     bullets: [
+      "CI/CD Pipelines — GitHub Actions, Jenkins, ArgoCD",
+      "GitOps & Argo Rollouts (canary, blue-green deploys)",
       "Internal Developer Platform (IDP) — Backstage / Port",
       "Self-service environments via service catalogs",
-      "GitOps pipelines — GitHub Actions, ArgoCD, Argo Rollouts",
       "Kubernetes platform on EKS / GKE / AKS",
       "Infrastructure as Code — Terraform, Helm, Kustomize",
       "Developer experience metrics & DORA tracking",
@@ -54,9 +55,11 @@ const services = [
     ],
   },
   {
-    title: "Cloud Security",
-    desc: "Zero-trust networking, secrets management, compliance automation and shift-left security baked into your pipeline.",
+    title: "Cloud Security & DevSecOps",
+    desc: "Shift-left security baked into every pipeline — zero-trust networking, secrets management, compliance automation, and vulnerability scanning before code reaches production.",
     bullets: [
+      "DevSecOps Pipeline Integration (SAST, DAST, SCA)",
+      "Container & Image Scanning (Trivy, Snyk)",
       "AWS Control Tower / Landing Zone",
       "Secrets Management (Vault / AWS / GCP)",
       "RBAC & IAM Governance",
@@ -75,8 +78,8 @@ export default function Services() {
             fontSize: "clamp(30px, 4.5vw, 52px)", fontWeight: 900,
             letterSpacing: "-1.5px", color: "#f1f5f9", lineHeight: 1.1, maxWidth: 640,
           }}>
-            Cloud, Platform Engineering &amp;{" "}
-            <span className="italic-accent">DevOps Services</span>
+            DevOps, DevSecOps &amp;{" "}
+            <span className="italic-accent">Platform Engineering</span>
           </h2>
         </div>
 

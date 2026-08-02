@@ -20,6 +20,10 @@ const categories = [
     items: ["Prometheus", "Grafana", "Loki", "Tempo", "New Relic"],
   },
   {
+    label: "DevSecOps",
+    items: ["Trivy", "Snyk", "SonarQube", "OWASP ZAP", "Falco"],
+  },
+  {
     label: "Security",
     items: ["HashiCorp Vault", "AWS Secret Manager", "RBAC & IAM", "OPA / Gatekeeper"],
   },

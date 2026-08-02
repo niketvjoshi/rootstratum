@@ -14,10 +14,10 @@ const highlights = [
 ];
 
 const expertise = [
-  { label: "Platform Engineering",          sub: "IDP · Backstage · Port" },
+  { label: "DevOps & Platform Engineering",  sub: "CI/CD · GitOps · IDP" },
+  { label: "DevSecOps",                      sub: "SAST · DAST · Shift-Left" },
   { label: "Multi-Cloud Architecture",       sub: "AWS · GCP · Azure" },
   { label: "Kubernetes & Container Ops",     sub: "EKS · GKE · AKS" },
-  { label: "CI/CD & GitOps",                sub: "Jenkins · ArgoCD" },
   { label: "Infrastructure as Code",         sub: "Terraform · Helm" },
   { label: "Observability Stack",            sub: "LGTM · Prometheus" },
   { label: "Cloud Security & Compliance",    sub: "IAM · WAF · Vault" },
@@ -27,9 +27,9 @@ const expertise = [
 const team = [
   { role: "Platform Engineering Lead",   bg: "10+ yrs — EKS, IDP, Backstage" },
   { role: "Cloud Architect",             bg: "AWS SA Pro — multi-cloud landing zones" },
-  { role: "DevOps & SRE Engineer",       bg: "GitOps, Prometheus, incident mgmt" },
+  { role: "DevOps & SRE Engineer",       bg: "GitOps, CI/CD pipelines, incident mgmt" },
+  { role: "DevSecOps Engineer",          bg: "SAST, DAST, container scanning, SOC2" },
   { role: "FinOps Specialist",           bg: "Graviton, Spot fleets, cost governance" },
-  { role: "Security Engineer",           bg: "Zero-trust, SOC2, AWS Control Tower" },
   { role: "AIOps Engineer",              bg: "ML scaling, OCCRA, OpenTelemetry" },
 ];
 

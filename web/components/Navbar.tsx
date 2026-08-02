@@ -62,7 +62,7 @@ export default function Navbar() {
         </div>
 
         {/* CTA */}
-        <a href="#contact" style={{
+        <a href="#contact-form" style={{
           fontSize: 12, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
           color: "#22d3ee", textDecoration: "none",
           border: "1px solid rgba(34,211,238,0.4)", borderRadius: 6,
@@ -104,7 +104,7 @@ export default function Navbar() {
               borderBottom: "1px solid rgba(255,255,255,0.05)",
             }}>{n.label}</a>
           ))}
-          <a href="#contact" className="btn-primary" style={{ marginTop: 20, display: "inline-flex" }}>
+          <a href="#contact-form" className="btn-primary" style={{ marginTop: 20, display: "inline-flex" }}>
             Let&apos;s Connect
           </a>
         </div>
