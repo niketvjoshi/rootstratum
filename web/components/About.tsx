@@ -91,7 +91,7 @@ export default function About() {
         </div>
 
         {/* Founding Team */}
-        <div>
+        <div id="founding-team" style={{ scrollMarginTop: 88 }}>
           <div style={{ marginBottom: 32 }}>
             <div className="label">Founding Team</div>
             <h3 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 900, letterSpacing: "-1px", color: "#f1f5f9", lineHeight: 1.15 }}>
