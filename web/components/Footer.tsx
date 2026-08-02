@@ -1,0 +1,104 @@
+"use client";
+export default function Footer() {
+  return (
+    <footer style={{ background: "#07091a", borderTop: "1px solid rgba(34,211,238,0.08)", padding: "64px 28px 36px" }}>
+      <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 48, marginBottom: 56 }}>
+
+          {/* Brand */}
+          <div>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 18 }}>
+              <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="36" height="36" rx="8" fill="url(#flg1)"/>
+                <rect x="8" y="22" width="20" height="3.5" rx="1.75" fill="white" fillOpacity="0.95"/>
+                <rect x="8" y="16.25" width="20" height="3.5" rx="1.75" fill="white" fillOpacity="0.7"/>
+                <rect x="8" y="10.5" width="20" height="3.5" rx="1.75" fill="white" fillOpacity="0.4"/>
+                <defs>
+                  <linearGradient id="flg1" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#22d3ee"/><stop offset="1" stopColor="#0e7490"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <span style={{ fontWeight: 800, fontSize: 16, color: "#f1f5f9" }}>
+                rootstratum<span style={{ color: "#22d3ee" }}>.</span>
+              </span>
+            </div>
+            <p style={{ color: "#475569", fontSize: 13, lineHeight: 1.75, maxWidth: 280, marginBottom: 20 }}>
+              Your trusted partner for Cloud Architecture, DevOps Engineering, and AIOps. A specialist team with deep, production-grade expertise across AWS, GCP and Azure.
+            </p>
+            <a href="mailto:hello@rootstratum.com" style={{ fontSize: 13, color: "#22d3ee", textDecoration: "none" }}>
+              hello@rootstratum.com
+            </a>
+          </div>
+
+          {/* Services */}
+          <div>
+            <div style={{ fontSize: 11, fontWeight: 800, color: "#f1f5f9", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 18 }}>Services</div>
+            {["DevOps Engineering", "Cloud Architecture", "Cloud Migration", "Cost Optimisation", "AIOps (OCCRA)", "Cloud Security"].map(l => (
+              <a key={l} href="#services" style={{
+                display: "block", color: "#475569", fontSize: 13,
+                textDecoration: "none", marginBottom: 10, transition: "color 0.2s",
+              }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#94a3b8")}
+                onMouseLeave={e => (e.currentTarget.style.color = "#475569")}
+              >{l}</a>
+            ))}
+          </div>
+
+          {/* Engage */}
+          <div>
+            <div style={{ fontSize: 11, fontWeight: 800, color: "#f1f5f9", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 18 }}>Engage</div>
+            {["Fixed-Scope Project", "Monthly Retainer", "Fractional Head of Platform", "Book a Consultation"].map(l => (
+              <a key={l} href="#engagement" style={{
+                display: "block", color: "#475569", fontSize: 13,
+                textDecoration: "none", marginBottom: 10, transition: "color 0.2s",
+              }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#94a3b8")}
+                onMouseLeave={e => (e.currentTarget.style.color = "#475569")}
+              >{l}</a>
+            ))}
+          </div>
+
+          {/* Contact */}
+          <div>
+            <div style={{ fontSize: 11, fontWeight: 800, color: "#f1f5f9", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 18 }}>Contact</div>
+            <a href="mailto:hello@rootstratum.com" style={{ display: "block", color: "#475569", fontSize: 13, textDecoration: "none", marginBottom: 10 }}>
+              hello@rootstratum.com
+            </a>
+            <a href="#contact" style={{ display: "block", color: "#475569", fontSize: 13, textDecoration: "none", marginBottom: 10, transition: "color 0.2s" }}
+              onMouseEnter={e => (e.currentTarget.style.color = "#94a3b8")}
+              onMouseLeave={e => (e.currentTarget.style.color = "#475569")}
+            >Send a Message</a>
+            <a href="https://linkedin.com" style={{ display: "block", color: "#475569", fontSize: 13, textDecoration: "none", transition: "color 0.2s" }}
+              onMouseEnter={e => (e.currentTarget.style.color = "#94a3b8")}
+              onMouseLeave={e => (e.currentTarget.style.color = "#475569")}
+            >LinkedIn</a>
+          </div>
+        </div>
+
+        {/* Bottom */}
+        <div style={{
+          borderTop: "1px solid rgba(34,211,238,0.07)",
+          paddingTop: 24,
+          display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12,
+        }}>
+          <span style={{ fontSize: 12, color: "#334155" }}>© 2026 Rootstratum. All rights reserved.</span>
+          <div style={{ display: "flex", gap: 24 }}>
+            {["Privacy Policy", "Terms of Service"].map(l => (
+              <a key={l} href="#" style={{ fontSize: 12, color: "#334155", textDecoration: "none" }}>{l}</a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        @media (max-width: 760px) {
+          footer > div > div:first-child { grid-template-columns: 1fr 1fr !important; }
+        }
+        @media (max-width: 480px) {
+          footer > div > div:first-child { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
+    </footer>
+  );
+}
