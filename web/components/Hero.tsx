@@ -1,12 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 
-const LOGOS = [
-  "Amazon Web Services", "Google Cloud", "Microsoft Azure", "Kubernetes",
-  "Terraform", "GitHub Actions", "ArgoCD", "Prometheus", "Grafana",
-  "New Relic", "PostgreSQL", "Redis", "Docker", "Helm",
-];
-
 type LineType = "cmd" | "comment" | "out" | "warn";
 const LINES: { type: LineType; text: string }[] = [
   { type: "cmd",     text: "./platform-audit.sh --env prod" },
@@ -91,9 +85,9 @@ export default function Hero() {
             <div className="fade-up d4" style={{ display: "flex", gap: 0, borderTop: "1px solid rgba(34,211,238,0.1)", paddingTop: 36, flexWrap: "wrap" }}>
               {[
                 { value: "17+",    label: "Years of Experience" },
-                { value: "50+",    label: "Projects Delivered" },
-                { value: "40%",    label: "Avg. Cloud Cost Saved" },
-                { value: "99.99%", label: "Uptime Guaranteed" },
+                { value: "3",      label: "Cloud Platforms" },
+                { value: "₹1.5Cr", label: "AWS Cost Eliminated" },
+                { value: "99.99%", label: "Uptime SLA" },
               ].map((s, i) => (
                 <div key={i} style={{
                   flex: "1 1 120px", paddingRight: 32,
@@ -164,31 +158,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Logo marquee */}
-      <div style={{
-        borderTop: "1px solid rgba(34,211,238,0.08)",
-        borderBottom: "1px solid rgba(34,211,238,0.08)",
-        background: "rgba(34,211,238,0.02)",
-        padding: "16px 0",
-        overflow: "hidden", position: "relative", zIndex: 1,
-      }}>
-        <p style={{ textAlign: "center", fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", color: "#475569", marginBottom: 12 }}>
-          Trusted Technologies &amp; Platforms
-        </p>
-        <div style={{ overflow: "hidden" }}>
-          <div className="marquee-track">
-            {[...LOGOS, ...LOGOS].map((logo, i) => (
-              <span key={i} style={{
-                display: "inline-flex", alignItems: "center", padding: "0 36px",
-                fontSize: 11, fontWeight: 700, letterSpacing: "0.08em",
-                color: "#475569", textTransform: "uppercase", whiteSpace: "nowrap",
-              }}>
-                {logo}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
 
       <style>{`
         @media (max-width: 900px) {
