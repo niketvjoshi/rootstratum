@@ -10,13 +10,6 @@ const trust = [
   "No pitch decks. Just an honest conversation.",
 ];
 
-const founding = [
-  { label: "Rate", value: "20% below standard, locked 12 months" },
-  { label: "Access", value: "Niket personally leads your engagement" },
-  { label: "Outcome", value: "Co-authored case study on completion" },
-  { label: "Spots", value: "3 slots total — accepting applications now" },
-];
-
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
   const [sent, setSent] = useState(false);
@@ -96,35 +89,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Founding client box */}
-            <div style={{
-              background: "rgba(14,19,38,0.8)",
-              border: "1px solid rgba(34,211,238,0.12)",
-              borderRadius: 14, padding: "28px 32px",
-            }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
-                <span style={{
-                  width: 8, height: 8, borderRadius: "50%", background: "#22d3ee",
-                  display: "inline-block", flexShrink: 0,
-                  boxShadow: "0 0 8px rgba(34,211,238,0.6)",
-                }} />
-                <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", color: "#22d3ee" }}>
-                  Founding Client Programme · 3 Spots
-                </span>
-              </div>
-              <p style={{ fontSize: 13, color: "#94a3b8", lineHeight: 1.7, marginBottom: 20 }}>
-                We're selectively accepting three founding clients. If you move fast,
-                these are the terms we won't offer once we're at capacity:
-              </p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                {founding.map(f => (
-                  <div key={f.label} style={{ display: "flex", gap: 12 }}>
-                    <span style={{ fontSize: 11, fontWeight: 700, color: "#22d3ee", textTransform: "uppercase", letterSpacing: "0.08em", minWidth: 56, paddingTop: 1 }}>{f.label}</span>
-                    <span style={{ fontSize: 13, color: "#cbd5e1" }}>{f.value}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* Right — form */}

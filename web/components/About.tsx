@@ -1,18 +1,3 @@
-const highlights = [
-  {
-    title: "OTT-Scale Live Event Infrastructure",
-    desc: "Designed and operated mixed Spot + On-Demand Kubernetes clusters serving one of cricket's highest-concurrent-viewer streaming events — zero incidents, elastic at peak, cost-optimised throughout.",
-  },
-  {
-    title: "₹1.5 Crore FinOps Win",
-    desc: "Cut annual AWS spend by over ₹1.5 crore for a global media network's India streaming division through Graviton migration, Spot fleet management, and structured reserved capacity planning.",
-  },
-  {
-    title: "17+ Years Under the Hood",
-    desc: "Not consulting experience — hands-on production engineering across media, fintech, and enterprise on AWS, GCP, and Azure. The kind of experience that knows what breaks at 3am and why.",
-  },
-];
-
 const expertise = [
   { label: "DevOps & Platform Engineering",  sub: "CI/CD · GitOps · IDP" },
   { label: "DevSecOps",                      sub: "SAST · DAST · Shift-Left" },
@@ -55,16 +40,6 @@ export default function About() {
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <a href="#contact-form" className="btn-primary">Work with Our Team</a>
               <a href="#services" className="btn-outline">View All Services</a>
-            </div>
-
-            {/* Highlights */}
-            <div style={{ marginTop: 48, display: "flex", flexDirection: "column", gap: 24 }}>
-              {highlights.map(h => (
-                <div key={h.title} style={{ borderLeft: "2px solid #22d3ee", paddingLeft: 20 }}>
-                  <div style={{ fontSize: 15, fontWeight: 800, color: "#f1f5f9", marginBottom: 5 }}>{h.title}</div>
-                  <div style={{ fontSize: 13, color: "#94a3b8", lineHeight: 1.65 }}>{h.desc}</div>
-                </div>
-              ))}
             </div>
           </div>
 
