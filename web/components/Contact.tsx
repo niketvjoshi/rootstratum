@@ -49,11 +49,11 @@ export default function Contact() {
               <p style={{ color: "#94a3b8", fontSize: 16, lineHeight: 1.7, marginBottom: 32 }}>
                 Schedule a consultation. We will assess your infrastructure and deliver concrete, actionable recommendations within 5 business days.
               </p>
-              <a href="mailto:hello@rootstratum.com" style={{
+              <a href="mailto:sales@rootstratum.com" style={{
                 fontSize: 18, fontWeight: 700, color: "#22d3ee", textDecoration: "none",
                 display: "block", marginBottom: 28,
                 letterSpacing: "-0.3px",
-              }}>hello@rootstratum.com</a>
+              }}>sales@rootstratum.com</a>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {trust.map(t => (
                   <div key={t} style={{ display: "flex", alignItems: "center", gap: 10 }}>

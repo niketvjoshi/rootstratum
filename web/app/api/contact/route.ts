@@ -3,8 +3,8 @@ import { NextRequest, NextResponse } from "next/server";
 
 const ses = new SESClient({ region: "ap-south-1" });
 
-const TO      = "hello@rootstratum.com";
-const FROM    = "hello@rootstratum.com";
+const TO      = "sales@rootstratum.com";
+const FROM    = "sales@rootstratum.com";
 const MAX_LEN = 4000;
 
 export async function POST(req: NextRequest) {
