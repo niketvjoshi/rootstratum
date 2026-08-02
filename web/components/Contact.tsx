@@ -70,13 +70,15 @@ export default function Contact() {
           </div>
         </div>
 
+        {/* Invisible anchor — sits 88px above the visible form to clear the fixed navbar */}
+        <div id="contact-form" style={{ position: "relative", top: -88, marginBottom: -88 }} aria-hidden="true" />
+
         {/* Form */}
-        <div id="contact-form" style={{
+        <div style={{
           background: "rgba(14,19,38,0.6)",
           border: "1px solid rgba(34,211,238,0.1)",
           borderRadius: 16, padding: "48px",
           maxWidth: 720, margin: "0 auto",
-          scrollMarginTop: 88,
         }}>
           {sent ? (
             <div style={{ textAlign: "center", padding: "40px 0" }}>
