@@ -100,10 +100,10 @@ export default function About() {
                 src="/niket.jpg"
                 alt="Niket Joshi"
                 style={{
-                  width: 64, height: 64, borderRadius: "50%",
+                  width: 120, height: 120, borderRadius: "50%",
                   objectFit: "cover",
-                  border: "2px solid rgba(34,211,238,0.4)",
-                  marginBottom: 16,
+                  border: "3px solid rgba(34,211,238,0.5)",
+                  marginBottom: 20,
                 }}
               />
 
