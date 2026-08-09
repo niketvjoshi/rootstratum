@@ -41,7 +41,7 @@ export default function Contact() {
             <span className="italic-accent">Actually Scales?</span>
           </h2>
           <p style={{ color: "#94a3b8", fontSize: 16, lineHeight: 1.7, maxWidth: 560 }}>
-            Start with a free 30-minute discovery call. No pitch, no pressure —
+            Start with a 30-minute discovery call. No pitch, no pressure —
             just an honest conversation about your infrastructure and where we can help.
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function Contact() {
               marginBottom: 28,
             }}>
               <div style={{ fontSize: 19, fontWeight: 800, color: "#f1f5f9", marginBottom: 8 }}>
-                Book a Free Discovery Call
+                Book a Discovery Call
               </div>
               <p style={{ color: "#94a3b8", fontSize: 14, lineHeight: 1.7, marginBottom: 28 }}>
                 30 minutes with Niket — Founder & CEO. We'll look at your current setup,
@@ -76,7 +76,7 @@ export default function Contact() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
                 </svg>
-                Book a Free 30-Min Call →
+                Book a 30-Min Call →
               </a>
 
               <div style={{ marginTop: 24, display: "flex", flexDirection: "column", gap: 10 }}>
