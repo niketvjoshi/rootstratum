@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  serverExternalPackages: ["newrelic"],
+  serverExternalPackages: ["@opentelemetry/sdk-node", "@opentelemetry/exporter-trace-otlp-http"],
 };
 
 export default nextConfig;
