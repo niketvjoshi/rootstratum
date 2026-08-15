@@ -73,7 +73,7 @@ export default function Hero() {
             </h1>
 
             <p className="fade-up d2" style={{ fontSize: 17, color: "#94a3b8", lineHeight: 1.75, maxWidth: 500, marginBottom: 40 }}>
-              A team of senior cloud and platform engineers helping businesses build, migrate, and operate infrastructure at scale — across India and globally.
+              A team of senior cloud and DevOps engineers helping businesses build, migrate, and operate infrastructure at scale — across India and globally.
             </p>
 
             <div className="fade-up d3" style={{ display: "flex", gap: 14, flexWrap: "wrap", marginBottom: 64 }}>

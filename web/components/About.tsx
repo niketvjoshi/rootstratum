@@ -28,7 +28,7 @@ export default function About() {
               <span className="italic-accent">production-grade infrastructure</span>
             </h2>
             <p style={{ color: "#94a3b8", fontSize: 16, lineHeight: 1.8, marginBottom: 20 }}>
-              Rootstratum is founded by senior cloud and platform engineers who have spent years
+              Rootstratum is founded by senior cloud and DevOps engineers who have spent years
               operating infrastructure at hyperscaler scale. We've seen what breaks under
               pressure — and we build systems that don't.
             </p>
@@ -48,7 +48,7 @@ export default function About() {
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#475569", marginBottom: 8 }}>
               Core Expertise
             </div>
-            <p style={{ fontSize: 13, color: "#64748b", marginBottom: 24 }}>Expert-level execution across the full cloud-native stack</p>
+            <p style={{ fontSize: 13, color: "#64748b", marginBottom: 24 }}>Expert-level execution across the full cloud &amp; DevOps stack</p>
             <div style={{ display: "flex", flexDirection: "column", border: "1px solid rgba(34,211,238,0.1)", borderRadius: 12, overflow: "hidden" }}>
               {expertise.map((e, i) => (
                 <div key={e.label} style={{
