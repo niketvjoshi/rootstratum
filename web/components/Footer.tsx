@@ -9,8 +9,8 @@ export default function Footer() {
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 18 }}>
               <img src="/logo.png" alt="RootStratum" width="42" height="42" style={{ borderRadius: "50%", display: "block" }} />
-              <span style={{ fontWeight: 800, fontSize: 16, color: "#f1f5f9" }}>
-                rootstratum
+              <span style={{ fontWeight: 800, fontSize: 16, color: "#22d3ee" }}>
+                RootStratum
               </span>
             </div>
             <p style={{ color: "#475569", fontSize: 13, lineHeight: 1.75, maxWidth: 280, marginBottom: 20 }}>

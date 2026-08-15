@@ -33,8 +33,8 @@ export default function Navbar() {
         {/* Logo */}
         <a href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
           <img src="/logo.png" alt="RootStratum" width="44" height="44" style={{ borderRadius: "50%", display: "block" }} />
-          <span style={{ fontWeight: 800, fontSize: 16, color: "#f1f5f9", letterSpacing: "-0.3px" }}>
-            rootstratum
+          <span style={{ fontWeight: 800, fontSize: 16, color: "#22d3ee", letterSpacing: "-0.3px" }}>
+            RootStratum
           </span>
         </a>
 
