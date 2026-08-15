@@ -8,12 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 18 }}>
-              <svg width="42" height="42" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
-                  <circle cx="22" cy="22" r="20.5" fill="#07101c" stroke="#22d3ee" strokeWidth="1.5"/>
-                  <text x="22" y="28.5" textAnchor="middle"
-                        fontFamily="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
-                        fontWeight="800" fontSize="17" fill="#22d3ee" letterSpacing="-0.5">RS</text>
-                </svg>
+              <img src="/logo.png" alt="RootStratum" style={{ width: 42, height: 42, borderRadius: "50%", objectFit: "cover", flexShrink: 0, alignSelf: "center" }} />
               <span style={{ fontWeight: 800, fontSize: 16, color: "#22d3ee" }}>
                 RootStratum
               </span>
