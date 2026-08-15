@@ -32,7 +32,9 @@ export default function Navbar() {
 
         {/* Logo */}
         <a href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
-          <img src="/logo.png" alt="RootStratum" width="44" height="44" style={{ borderRadius: "50%", display: "block" }} />
+          <div style={{ width: 44, height: 44, borderRadius: "50%", overflow: "hidden", flexShrink: 0 }}>
+            <img src="/logo.png" alt="RootStratum" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+          </div>
           <span style={{ fontWeight: 800, fontSize: 16, color: "#22d3ee", letterSpacing: "-0.3px" }}>
             RootStratum
           </span>
