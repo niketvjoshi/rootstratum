@@ -5,7 +5,8 @@ export async function register() {
     const { OTLPMetricExporter }         = await import('@opentelemetry/exporter-metrics-otlp-http')
     const { PeriodicExportingMetricReader } = await import('@opentelemetry/sdk-metrics')
     const { HttpInstrumentation }        = await import('@opentelemetry/instrumentation-http')
-    const { Resource }                   = await import('@opentelemetry/resources')
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const { Resource } = (await import('@opentelemetry/resources') as any)
 
     const endpoint = process.env.OTLP_ENDPOINT ?? 'https://otlp.nr-data.net:4318'
     const apiKey   = process.env.NEW_RELIC_LICENSE_KEY ?? ''
