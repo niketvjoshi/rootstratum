@@ -10,7 +10,7 @@ export async function register() {
 
     const endpoint = process.env.OTLP_ENDPOINT ?? 'https://otlp.nr-data.net:4318'
     const apiKey   = process.env.NEW_RELIC_LICENSE_KEY ?? ''
-    const headers  = apiKey ? { 'api-key': apiKey } : {}
+    const headers: Record<string, string> = apiKey ? { 'api-key': apiKey } : {}
 
     const sdk = new NodeSDK({
       resource: new Resource({
