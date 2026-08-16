@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
     "@opentelemetry/exporter-metrics-otlp-http",
     "@opentelemetry/sdk-metrics",
     "@opentelemetry/instrumentation-http",
-    "@opentelemetry/resources",
     "@opentelemetry/api",
   ],
 };
