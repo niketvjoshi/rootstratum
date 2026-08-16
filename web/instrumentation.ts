@@ -3,7 +3,7 @@ export async function register() {
     const { NodeSDK }                       = await import('@opentelemetry/sdk-node')
     const { OTLPTraceExporter }             = await import('@opentelemetry/exporter-trace-otlp-http')
     const { OTLPMetricExporter }            = await import('@opentelemetry/exporter-metrics-otlp-http')
-    const { PeriodicExportingMetricReader } = await import('@opentelemetry/sdk-metrics')
+    const { PeriodicExportingMetricReader, AggregationTemporality } = await import('@opentelemetry/sdk-metrics')
     const { HttpInstrumentation }           = await import('@opentelemetry/instrumentation-http')
 
     // Resource attributes are set via env vars that NodeSDK reads automatically:
@@ -20,9 +20,11 @@ export async function register() {
         headers,
       }),
       metricReaders: [new PeriodicExportingMetricReader({
+        // New Relic requires Delta temporality — Cumulative (default) causes "Required metrics are missing"
         exporter: new OTLPMetricExporter({
           url: `${endpoint}/v1/metrics`,
           headers,
+          temporalityPreference: AggregationTemporality.DELTA,
         }),
         exportIntervalMillis: 10_000,
       })],
