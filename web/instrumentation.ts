@@ -19,13 +19,13 @@ export async function register() {
         url: `${endpoint}/v1/traces`,
         headers,
       }),
-      metricReader: new PeriodicExportingMetricReader({
+      metricReaders: [new PeriodicExportingMetricReader({
         exporter: new OTLPMetricExporter({
           url: `${endpoint}/v1/metrics`,
           headers,
         }),
         exportIntervalMillis: 10_000,
-      }),
+      })],
       instrumentations: [
         new HttpInstrumentation({
           ignoreIncomingRequestHook: (req) =>
