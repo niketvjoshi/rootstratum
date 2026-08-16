@@ -1,5 +1,6 @@
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { NextRequest, NextResponse } from "next/server";
+import { trace, SpanStatusCode } from "@opentelemetry/api";
 
 const ses = new SESClient({ region: "ap-south-1" });
 
@@ -39,20 +40,33 @@ export async function POST(req: NextRequest) {
     message,
   ].join("\n");
 
-  try {
-    await ses.send(new SendEmailCommand({
-      Source:      FROM,
-      Destination: { ToAddresses: [TO] },
-      ReplyToAddresses: [email],
-      Message: {
-        Subject: { Data: subject, Charset: "UTF-8" },
-        Body:    { Text: { Data: bodyText, Charset: "UTF-8" } },
-      },
-    }));
+  const tracer = trace.getTracer("rootstratum.contact", "1.0.0");
 
-    return NextResponse.json({ ok: true });
-  } catch (err) {
-    console.error("SES error:", err);
-    return NextResponse.json({ error: "Failed to send message" }, { status: 500 });
-  }
+  return tracer.startActiveSpan("contact.form.submit", { attributes: {
+    "contact.has_company": Boolean(company),
+    "contact.email.provider": "aws.ses",
+    "contact.email.recipient": TO,
+  }}, async (span) => {
+    try {
+      await ses.send(new SendEmailCommand({
+        Source:      FROM,
+        Destination: { ToAddresses: [TO] },
+        ReplyToAddresses: [email],
+        Message: {
+          Subject: { Data: subject, Charset: "UTF-8" },
+          Body:    { Text: { Data: bodyText, Charset: "UTF-8" } },
+        },
+      }));
+
+      span.setStatus({ code: SpanStatusCode.OK });
+      span.end();
+      return NextResponse.json({ ok: true });
+    } catch (err) {
+      span.recordException(err as Error);
+      span.setStatus({ code: SpanStatusCode.ERROR, message: String(err) });
+      span.end();
+      console.error("SES error:", err);
+      return NextResponse.json({ error: "Failed to send message" }, { status: 500 });
+    }
+  });
 }
