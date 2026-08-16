@@ -1,6 +1,7 @@
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { NextRequest, NextResponse } from "next/server";
 import { trace, SpanStatusCode } from "@opentelemetry/api";
+import { occra } from "@/lib/occra";
 
 const ses = new SESClient({ region: "ap-south-1" });
 
@@ -60,11 +61,16 @@ export async function POST(req: NextRequest) {
 
       span.setStatus({ code: SpanStatusCode.OK });
       span.end();
+      occra.event('contact.form.submitted', {
+        has_company: Boolean(company),
+        email_provider: email.split('@')[1] ?? 'unknown',
+      });
       return NextResponse.json({ ok: true });
     } catch (err) {
       span.recordException(err as Error);
       span.setStatus({ code: SpanStatusCode.ERROR, message: String(err) });
       span.end();
+      occra.error('contact.form.failed', { error: String(err) });
       console.error("SES error:", err);
       return NextResponse.json({ error: "Failed to send message" }, { status: 500 });
     }
