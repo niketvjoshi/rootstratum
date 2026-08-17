@@ -78,8 +78,8 @@ export default function Services() {
             fontSize: "clamp(30px, 4.5vw, 52px)", fontWeight: 900,
             letterSpacing: "-1.5px", color: "#f1f5f9", lineHeight: 1.1, maxWidth: 640,
           }}>
-            DevOps, DevSecOps &amp;{" "}
-            <span className="italic-accent">Platform Engineering</span>
+            DevOps, DevSecOps, Platform Engineering &amp;{" "}
+            <span className="italic-accent">Multi Cloud</span>
           </h2>
         </div>
 
