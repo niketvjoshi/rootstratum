@@ -108,7 +108,7 @@ export default function Services() {
               <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
                 {s.bullets.map(b => (
                   <li key={b} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                    <span style={{ color: "#22d3ee", flexShrink: 0 }}>∨</span>
+                    <span style={{ color: "#22d3ee", flexShrink: 0 }}>›</span>
                     <span style={{ fontSize: 13, color: "#cbd5e1" }}>{b}</span>
                   </li>
                 ))}
