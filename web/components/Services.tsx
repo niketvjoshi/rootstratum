@@ -78,7 +78,7 @@ export default function Services() {
             fontSize: "clamp(30px, 4.5vw, 52px)", fontWeight: 900,
             letterSpacing: "-1.5px", color: "#0f1623", lineHeight: 1.1, maxWidth: 640,
           }}>
-            DevOps, DevSecOps, Platform Engineering &amp;{" "}
+            DevOps, DevSecOps, Platform Engineering, Observability &amp;{" "}
             <span className="italic-accent">Multi Cloud</span>
           </h2>
         </div>
