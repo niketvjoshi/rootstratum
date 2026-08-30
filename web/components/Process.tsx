@@ -23,13 +23,13 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" style={{ background: "#0e1326", padding: "100px 28px" }}>
+    <section id="process" style={{ background: "#edf1f5", padding: "100px 28px" }}>
       <div style={{ maxWidth: 1240, margin: "0 auto" }}>
         <div style={{ marginBottom: 64 }}>
           <div className="label">Our Process</div>
           <h2 style={{
             fontSize: "clamp(30px, 4.5vw, 52px)", fontWeight: 900,
-            letterSpacing: "-1.5px", color: "#f1f5f9", lineHeight: 1.1, maxWidth: 600,
+            letterSpacing: "-1.5px", color: "#0f1623", lineHeight: 1.1, maxWidth: 600,
           }}>
             From First Call to Production —{" "}
             <span className="italic-accent">Fast</span>
@@ -39,32 +39,38 @@ export default function Process() {
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-          gap: 2,
-          background: "rgba(34,211,238,0.06)",
-          border: "1px solid rgba(34,211,238,0.12)",
-          borderRadius: 16, overflow: "hidden",
+          gap: 16,
         }}>
           {steps.map((s, i) => (
             <div key={s.n} style={{
-              padding: "40px 32px",
-              borderRight: i < steps.length - 1 ? "1px solid rgba(34,211,238,0.1)" : "none",
+              padding: "36px 32px",
+              background: "#ffffff",
+              border: "1px solid rgba(15,22,35,0.08)",
+              borderRadius: 14,
               position: "relative",
-            }}>
+              transition: "box-shadow 0.2s, border-color 0.2s",
+            }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 4px 24px rgba(13,148,136,0.1)";
+                (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(13,148,136,0.25)";
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
+                (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(15,22,35,0.08)";
+              }}
+            >
               <div style={{
-                fontSize: 11, fontWeight: 800, letterSpacing: "0.16em",
-                color: "#22d3ee", marginBottom: 20, display: "flex", alignItems: "center", gap: 8,
-              }}>
-                <span style={{
-                  width: 28, height: 28, borderRadius: "50%",
-                  border: "1px solid rgba(34,211,238,0.3)",
-                  display: "inline-flex", alignItems: "center", justifyContent: "center",
-                  fontSize: 11, fontWeight: 800,
-                }}>{s.n}</span>
-              </div>
-              <h3 style={{ fontSize: 18, fontWeight: 800, color: "#f1f5f9", marginBottom: 12, lineHeight: 1.25 }}>
+                width: 36, height: 36, borderRadius: 10,
+                background: "rgba(13,148,136,0.08)",
+                border: "1px solid rgba(13,148,136,0.2)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: 12, fontWeight: 800, color: "#0d9488",
+                marginBottom: 20,
+              }}>{s.n}</div>
+              <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0f1623", marginBottom: 12, lineHeight: 1.25, letterSpacing: "-0.3px" }}>
                 {s.title}
               </h3>
-              <p style={{ fontSize: 14, color: "#94a3b8", lineHeight: 1.7 }}>{s.desc}</p>
+              <p style={{ fontSize: 14, color: "#4b5563", lineHeight: 1.7 }}>{s.desc}</p>
             </div>
           ))}
         </div>

@@ -19,10 +19,10 @@ const LINES: { type: LineType; text: string }[] = [
 ];
 
 const COLOR: Record<LineType, string> = {
-  cmd:     "#22d3ee",
-  comment: "#475569",
-  out:     "#00ffa3",
-  warn:    "#fbbf24",
+  cmd:     "#0d9488",
+  comment: "#94a3b8",
+  out:     "#059669",
+  warn:    "#d97706",
 };
 
 export default function Hero() {
@@ -38,41 +38,39 @@ export default function Hero() {
     <section style={{
       position: "relative", minHeight: "100vh",
       display: "flex", flexDirection: "column", justifyContent: "center",
-      overflow: "hidden", background: "#07091a",
+      overflow: "hidden", background: "#edf1f5",
     }}>
-      {/* Grid bg */}
+      {/* Subtle grid */}
       <div style={{
         position: "absolute", inset: 0, pointerEvents: "none",
-        backgroundImage: "linear-gradient(rgba(34,211,238,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(34,211,238,0.04) 1px,transparent 1px)",
-        backgroundSize: "60px 60px",
+        backgroundImage: "linear-gradient(rgba(13,148,136,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(13,148,136,0.04) 1px,transparent 1px)",
+        backgroundSize: "64px 64px",
       }} />
-      {/* Glows */}
-      <div style={{ position: "absolute", top: "5%", left: "-10%", width: 600, height: 600, borderRadius: "50%", background: "radial-gradient(circle,rgba(34,211,238,0.07) 0%,transparent 65%)", pointerEvents: "none" }} />
-      <div style={{ position: "absolute", bottom: "5%", right: "-5%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle,rgba(14,116,144,0.08) 0%,transparent 65%)", pointerEvents: "none" }} />
+      {/* Soft glow */}
+      <div style={{ position: "absolute", top: "10%", right: "-8%", width: 640, height: 640, borderRadius: "50%", background: "radial-gradient(circle,rgba(13,148,136,0.06) 0%,transparent 65%)", pointerEvents: "none" }} />
+      <div style={{ position: "absolute", bottom: "10%", left: "-5%", width: 480, height: 480, borderRadius: "50%", background: "radial-gradient(circle,rgba(13,148,136,0.04) 0%,transparent 65%)", pointerEvents: "none" }} />
 
-      {/* Two-column content */}
-      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "120px 28px 60px", position: "relative", zIndex: 1, width: "100%" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 420px", gap: 64, alignItems: "center" }}>
+      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "120px 28px 80px", position: "relative", zIndex: 1, width: "100%" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 420px", gap: 72, alignItems: "center" }}>
 
           {/* ── Left: copy ── */}
           <div>
-            <div className="fade-up" style={{ marginBottom: 28 }}>
-              <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#94a3b8" }}>
-                <span style={{ color: "#22d3ee", marginRight: 10 }}>●</span>
+            <div className="fade-up" style={{ marginBottom: 24 }}>
+              <span style={{ fontSize: 13, fontWeight: 700, color: "#0d9488" }}>
                 Cloud · DevOps · DevSecOps · Platform Engineering · AIOps &nbsp;·&nbsp; India &amp; Global
               </span>
             </div>
 
             <h1 className="fade-up d1" style={{
-              fontSize: "clamp(48px, 6.5vw, 88px)", fontWeight: 900,
-              lineHeight: 1.0, letterSpacing: "-3px", color: "#f1f5f9", marginBottom: 28,
+              fontSize: "clamp(48px, 6.5vw, 84px)", fontWeight: 900,
+              lineHeight: 1.0, letterSpacing: "-3px", color: "#0f1623", marginBottom: 28,
             }}>
               Ship Faster.<br />
               Scale <span className="italic-accent">Smarter.</span><br />
               Spend <span className="italic-accent">Less.</span>
             </h1>
 
-            <p className="fade-up d2" style={{ fontSize: 17, color: "#94a3b8", lineHeight: 1.75, maxWidth: 500, marginBottom: 40 }}>
+            <p className="fade-up d2" style={{ fontSize: 17, color: "#4b5563", lineHeight: 1.75, maxWidth: 480, marginBottom: 40 }}>
               A team of senior cloud and DevOps engineers helping businesses build, migrate, and operate infrastructure at scale — across India and globally.
             </p>
 
@@ -82,7 +80,7 @@ export default function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="fade-up d4" style={{ display: "flex", gap: 0, borderTop: "1px solid rgba(34,211,238,0.1)", paddingTop: 36, flexWrap: "wrap" }}>
+            <div className="fade-up d4" style={{ display: "flex", gap: 0, borderTop: "1px solid rgba(15,22,35,0.1)", paddingTop: 36, flexWrap: "wrap" }}>
               {[
                 { value: "17+",    label: "Years of Experience" },
                 { value: "3",      label: "Cloud Platforms" },
@@ -91,11 +89,11 @@ export default function Hero() {
               ].map((s, i) => (
                 <div key={i} style={{
                   flex: "1 1 120px", paddingRight: 32,
-                  borderRight: i < 3 ? "1px solid rgba(34,211,238,0.1)" : "none",
+                  borderRight: i < 3 ? "1px solid rgba(15,22,35,0.1)" : "none",
                   paddingLeft: i > 0 ? 32 : 0,
                 }}>
-                  <div style={{ fontSize: 30, fontWeight: 900, color: "#22d3ee", letterSpacing: "-1px", lineHeight: 1 }}>{s.value}</div>
-                  <div style={{ fontSize: 11, color: "#64748b", marginTop: 5, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}>{s.label}</div>
+                  <div style={{ fontSize: 28, fontWeight: 900, color: "#0d9488", letterSpacing: "-1px", lineHeight: 1 }}>{s.value}</div>
+                  <div style={{ fontSize: 11, color: "#9ca3af", marginTop: 5, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}>{s.label}</div>
                 </div>
               ))}
             </div>
@@ -103,22 +101,21 @@ export default function Hero() {
 
           {/* ── Right: terminal ── */}
           <div className="fade-up d2" style={{
-            background: "rgb(22,29,43)",
-            border: "1px solid rgba(99,179,237,0.1)",
-            borderRadius: 20,
-            boxShadow: "0 40px 100px rgba(0,0,0,0.5), 0 0 0 1px rgba(34,211,238,0.06), inset 0 1px 0 rgba(255,255,255,0.04)",
+            background: "#1a2235",
+            borderRadius: 16,
+            boxShadow: "0 32px 80px rgba(15,22,35,0.18), 0 0 0 1px rgba(255,255,255,0.06)",
             overflow: "hidden",
           }}>
             {/* Title bar */}
             <div style={{
-              background: "rgb(30,42,61)",
-              borderBottom: "1px solid rgba(99,179,237,0.1)",
+              background: "#222f47",
+              borderBottom: "1px solid rgba(255,255,255,0.06)",
               padding: "13px 20px",
               display: "flex", alignItems: "center", gap: 8,
             }}>
-              <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#ff5f57", display: "inline-block" }} />
-              <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#febc2e", display: "inline-block" }} />
-              <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#28c840", display: "inline-block" }} />
+              <span style={{ width: 11, height: 11, borderRadius: "50%", background: "#ff5f57", display: "inline-block" }} />
+              <span style={{ width: 11, height: 11, borderRadius: "50%", background: "#febc2e", display: "inline-block" }} />
+              <span style={{ width: 11, height: 11, borderRadius: "50%", background: "#28c840", display: "inline-block" }} />
               <span style={{
                 marginLeft: 12,
                 fontFamily: "var(--font-mono, 'Space Mono', monospace)",
@@ -136,20 +133,20 @@ export default function Hero() {
               {LINES.slice(0, visible).map((line, i) => (
                 <div key={i} style={{ color: COLOR[line.type], marginBottom: 1 }}>
                   {line.type === "cmd" && (
-                    <><span style={{ color: "#22d3ee", marginRight: 8 }}>$</span><span style={{ color: "#94a3b8" }}>{line.text}</span></>
+                    <><span style={{ color: "#0d9488", marginRight: 8 }}>$</span><span style={{ color: "#94a3b8" }}>{line.text}</span></>
                   )}
                   {line.type !== "cmd" && line.text}
                 </div>
               ))}
               {visible < LINES.length && (
                 <div>
-                  <span style={{ color: "#22d3ee", marginRight: 8 }}>$</span>
+                  <span style={{ color: "#0d9488", marginRight: 8 }}>$</span>
                   <span className="terminal-cursor" />
                 </div>
               )}
               {visible >= LINES.length && (
                 <div style={{ marginTop: 4 }}>
-                  <span style={{ color: "#22d3ee", marginRight: 8 }}>$</span>
+                  <span style={{ color: "#0d9488", marginRight: 8 }}>$</span>
                   <span className="terminal-cursor" />
                 </div>
               )}
@@ -157,7 +154,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
 
       <style>{`
         @media (max-width: 900px) {

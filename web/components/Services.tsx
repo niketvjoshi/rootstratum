@@ -70,13 +70,13 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" style={{ background: "#07091a", padding: "100px 28px" }}>
+    <section id="services" style={{ background: "#f4f7fa", padding: "100px 28px" }}>
       <div style={{ maxWidth: 1240, margin: "0 auto" }}>
         <div style={{ marginBottom: 64 }}>
           <div className="label">What We Do</div>
           <h2 style={{
             fontSize: "clamp(30px, 4.5vw, 52px)", fontWeight: 900,
-            letterSpacing: "-1.5px", color: "#f1f5f9", lineHeight: 1.1, maxWidth: 640,
+            letterSpacing: "-1.5px", color: "#0f1623", lineHeight: 1.1, maxWidth: 640,
           }}>
             DevOps, DevSecOps, Platform Engineering &amp;{" "}
             <span className="italic-accent">Multi Cloud</span>
@@ -87,29 +87,30 @@ export default function Services() {
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
           gap: 1,
-          background: "rgba(34,211,238,0.06)",
-          border: "1px solid rgba(34,211,238,0.1)",
+          background: "rgba(15,22,35,0.06)",
+          border: "1px solid rgba(15,22,35,0.08)",
           borderRadius: 16, overflow: "hidden",
         }}>
           {services.map((s, i) => (
             <div key={s.title} style={{
               padding: "36px 32px",
-              borderRight: i % 2 === 0 ? "1px solid rgba(34,211,238,0.08)" : "none",
-              borderBottom: i < services.length - 2 ? "1px solid rgba(34,211,238,0.08)" : "none",
+              background: "#ffffff",
+              borderRight: i % 2 === 0 ? "1px solid rgba(15,22,35,0.06)" : "none",
+              borderBottom: i < services.length - 2 ? "1px solid rgba(15,22,35,0.06)" : "none",
               transition: "background 0.2s",
             }}
-              onMouseEnter={e => (e.currentTarget.style.background = "rgba(34,211,238,0.03)")}
-              onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
+              onMouseEnter={e => (e.currentTarget.style.background = "#f9fbfd")}
+              onMouseLeave={e => (e.currentTarget.style.background = "#ffffff")}
             >
-              <h3 style={{ fontSize: 19, fontWeight: 800, color: "#f1f5f9", marginBottom: 10, letterSpacing: "-0.3px" }}>
+              <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0f1623", marginBottom: 10, letterSpacing: "-0.3px" }}>
                 {s.title}
               </h3>
-              <p style={{ fontSize: 14, color: "#94a3b8", lineHeight: 1.7, marginBottom: 20 }}>{s.desc}</p>
+              <p style={{ fontSize: 14, color: "#4b5563", lineHeight: 1.7, marginBottom: 20 }}>{s.desc}</p>
               <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
                 {s.bullets.map(b => (
                   <li key={b} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                    <span style={{ color: "#22d3ee", flexShrink: 0 }}>›</span>
-                    <span style={{ fontSize: 13, color: "#cbd5e1" }}>{b}</span>
+                    <span style={{ color: "#0d9488", flexShrink: 0 }}>›</span>
+                    <span style={{ fontSize: 13, color: "#4b5563" }}>{b}</span>
                   </li>
                 ))}
               </ul>

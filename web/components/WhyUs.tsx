@@ -34,27 +34,43 @@ const differentiators = [
 
 export default function WhyUs() {
   return (
-    <section id="why-us" style={{ background: "#050b18", padding: "100px 24px" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-        <div style={{ textAlign: "center", marginBottom: 64 }}>
-          <div className="section-label" style={{ justifyContent: "center" }}>Why Rootstratum</div>
-          <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 800, letterSpacing: "-1px", color: "#f1f5f9", marginBottom: 16 }}>
-            Built for teams that can&apos;t
-            <br />
-            <span className="gradient-text">afford to get infrastructure wrong</span>
+    <section id="why-us" style={{ background: "#f4f7fa", padding: "100px 28px" }}>
+      <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+        <div style={{ marginBottom: 64 }}>
+          <div className="label">Why Rootstratum</div>
+          <h2 style={{
+            fontSize: "clamp(30px, 4.5vw, 52px)", fontWeight: 900,
+            letterSpacing: "-1.5px", color: "#0f1623", lineHeight: 1.1, maxWidth: 640,
+          }}>
+            Built for teams that can&apos;t afford to get{" "}
+            <span className="italic-accent">infrastructure wrong</span>
           </h2>
         </div>
 
         {/* Pillars */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24, marginBottom: 72 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16, marginBottom: 24 }}>
           {pillars.map((p) => (
-            <div key={p.number} className="gradient-border-card" style={{ borderRadius: 14, padding: "28px 24px" }}>
+            <div key={p.number} style={{
+              background: "#ffffff",
+              border: "1px solid rgba(15,22,35,0.08)",
+              borderRadius: 14, padding: "28px 24px",
+              transition: "box-shadow 0.2s, border-color 0.2s",
+            }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 4px 20px rgba(13,148,136,0.1)";
+                (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(13,148,136,0.2)";
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
+                (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(15,22,35,0.08)";
+              }}
+            >
               <div style={{
                 fontSize: 11, fontWeight: 700, letterSpacing: "0.12em",
-                color: "#3b82f6", marginBottom: 14, fontVariantNumeric: "tabular-nums"
+                color: "#0d9488", marginBottom: 14,
               }}>{p.number}</div>
-              <h3 style={{ fontSize: 17, fontWeight: 700, color: "#f1f5f9", marginBottom: 10, lineHeight: 1.3 }}>{p.title}</h3>
-              <p style={{ color: "#94a3b8", fontSize: 14, lineHeight: 1.65 }}>{p.desc}</p>
+              <h3 style={{ fontSize: 17, fontWeight: 700, color: "#0f1623", marginBottom: 10, lineHeight: 1.3, letterSpacing: "-0.2px" }}>{p.title}</h3>
+              <p style={{ color: "#4b5563", fontSize: 14, lineHeight: 1.65 }}>{p.desc}</p>
             </div>
           ))}
         </div>
@@ -64,29 +80,35 @@ export default function WhyUs() {
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gap: 0,
-          background: "#0d1f3c",
-          border: "1px solid rgba(59,130,246,0.18)",
+          background: "#ffffff",
+          border: "1px solid rgba(15,22,35,0.08)",
           borderRadius: 16,
           overflow: "hidden",
         }}>
-          <div style={{ padding: "48px 48px", borderRight: "1px solid rgba(59,130,246,0.12)" }}>
-            <h3 style={{ fontSize: 24, fontWeight: 800, color: "#f1f5f9", marginBottom: 8 }}>
+          <div style={{ padding: "48px 48px", borderRight: "1px solid rgba(15,22,35,0.06)" }}>
+            <h3 style={{ fontSize: 24, fontWeight: 800, color: "#0f1623", marginBottom: 8, letterSpacing: "-0.5px" }}>
               What makes us different
             </h3>
-            <p style={{ color: "#94a3b8", fontSize: 15, lineHeight: 1.65, marginBottom: 0 }}>
+            <p style={{ color: "#4b5563", fontSize: 15, lineHeight: 1.65 }}>
               We don&apos;t just hand over a Terraform repo and disappear. We stay embedded until your team is confident and your systems are stable.
             </p>
           </div>
           <div style={{ padding: "36px 40px", display: "flex", flexDirection: "column", gap: 14, justifyContent: "center" }}>
             {differentiators.map((d) => (
               <div key={d} style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
-                <CheckCircle2 size={16} color="#3b82f6" style={{ flexShrink: 0, marginTop: 2 }} />
-                <span style={{ fontSize: 14, color: "#cbd5e1", lineHeight: 1.5 }}>{d}</span>
+                <CheckCircle2 size={16} color="#0d9488" style={{ flexShrink: 0, marginTop: 2 }} />
+                <span style={{ fontSize: 14, color: "#4b5563", lineHeight: 1.5 }}>{d}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 760px) {
+          #why-us .diff-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </section>
   );
 }
