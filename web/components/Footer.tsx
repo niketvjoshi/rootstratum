@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 18 }}>
-              <img src="/logo.png" alt="RootStratum" style={{ width: 36, height: 36, borderRadius: "50%", objectFit: "cover" }} />
+              <img src="/logo.svg" alt="RootStratum" style={{ width: 36, height: 36 }} />
               <span style={{ fontWeight: 800, fontSize: 16, color: "#ffffff", letterSpacing: "-0.3px" }}>
                 RootStratum
               </span>
