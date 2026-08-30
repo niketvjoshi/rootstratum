@@ -1,3 +1,4 @@
+"use client";
 const achievements = [
   {
     metric: "₹1.5 Cr",
