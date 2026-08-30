@@ -18,7 +18,7 @@ const categories = [
   },
   {
     label: "Observability",
-    items: ["Prometheus", "Grafana", "Loki", "Tempo", "New Relic"],
+    items: ["Prometheus", "Grafana", "Loki", "Tempo", "New Relic", "Datadog"],
   },
   {
     label: "DevSecOps",

@@ -4,7 +4,7 @@ const expertise = [
   { label: "Multi-Cloud Architecture",       sub: "AWS · GCP · Azure" },
   { label: "Kubernetes & Container Ops",     sub: "EKS · GKE · AKS" },
   { label: "Infrastructure as Code",         sub: "Terraform · Helm" },
-  { label: "Observability Stack",            sub: "LGTM · Prometheus" },
+  { label: "Observability Stack",            sub: "LGTM · New Relic · Datadog" },
   { label: "Cloud Security & Compliance",    sub: "IAM · WAF · Vault" },
   { label: "FinOps & Cost Optimisation",     sub: "30–60% savings" },
 ];
