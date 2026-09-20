@@ -23,36 +23,44 @@ export default function Navbar() {
   return (
     <nav style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
-      background: scrolled ? "rgba(237,241,245,0.92)" : "rgba(237,241,245,0.7)",
-      backdropFilter: "blur(16px)",
-      borderBottom: scrolled ? "1px solid rgba(15,22,35,0.1)" : "1px solid transparent",
+      background: scrolled ? "rgba(7,9,26,0.94)" : "transparent",
+      backdropFilter: scrolled ? "blur(16px)" : "none",
+      borderBottom: scrolled ? "1px solid rgba(34,211,238,0.1)" : "1px solid transparent",
       transition: "all 0.3s",
     }}>
-      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 28px", display: "flex", alignItems: "center", height: 64 }}>
+      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 28px", display: "flex", alignItems: "center", height: 68 }}>
 
         {/* Logo */}
-        <a href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none", flexShrink: 0 }}>
-          <img src="/logo.svg" alt="RootStratum" style={{ width: 36, height: 36 }} />
-          <span style={{ fontWeight: 800, fontSize: 16, color: "#0f1623", letterSpacing: "-0.4px" }}>
+        <a href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
+          <img src="/logo.svg" alt="RootStratum" style={{ width: 40, height: 40, flexShrink: 0, alignSelf: "center" }} />
+          <span style={{ fontWeight: 800, fontSize: 16, color: "#22d3ee", letterSpacing: "-0.3px" }}>
             RootStratum
           </span>
         </a>
 
         {/* Desktop nav */}
-        <div style={{ display: "flex", gap: 36, alignItems: "center", marginLeft: "auto", marginRight: "auto" }}>
+        <div style={{ display: "flex", gap: 32, alignItems: "center", margin: "0 auto" }}>
           {NAV.map(n => (
             <a key={n.label} href={n.href} style={{
-              fontSize: 14, fontWeight: 500, color: "#4b5563",
-              textDecoration: "none", transition: "color 0.2s",
+              fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
+              color: "#64748b", textDecoration: "none", transition: "color 0.2s",
             }}
-              onMouseEnter={e => (e.currentTarget.style.color = "#0f1623")}
-              onMouseLeave={e => (e.currentTarget.style.color = "#4b5563")}
+              onMouseEnter={e => (e.currentTarget.style.color = "#f1f5f9")}
+              onMouseLeave={e => (e.currentTarget.style.color = "#64748b")}
             >{n.label}</a>
           ))}
         </div>
 
         {/* CTA */}
-        <a href="#contact-form" className="btn-primary" style={{ fontSize: 13, padding: "10px 20px" }}>
+        <a href="#contact-form" style={{
+          fontSize: 12, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
+          color: "#22d3ee", textDecoration: "none",
+          border: "1px solid rgba(34,211,238,0.4)", borderRadius: 6,
+          padding: "10px 18px", transition: "all 0.2s", whiteSpace: "nowrap",
+        }}
+          onMouseEnter={e => { e.currentTarget.style.background = "rgba(34,211,238,0.1)"; e.currentTarget.style.borderColor = "#22d3ee"; }}
+          onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = "rgba(34,211,238,0.4)"; }}
+        >
           Let&apos;s Connect
         </a>
 
@@ -60,7 +68,7 @@ export default function Navbar() {
         <button
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
-          style={{ display: "none", marginLeft: 16, background: "none", border: "none", cursor: "pointer", color: "#0f1623", padding: 6 }}
+          style={{ display: "none", marginLeft: 16, background: "none", border: "none", cursor: "pointer", color: "#f1f5f9", padding: 6 }}
           className="nav-mobile-btn"
         >
           <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2">
@@ -75,15 +83,15 @@ export default function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div style={{
-          background: "#edf1f5", borderTop: "1px solid rgba(15,22,35,0.08)",
+          background: "rgba(7,9,26,0.98)", borderTop: "1px solid rgba(34,211,238,0.08)",
           padding: "20px 28px 28px",
         }}>
           {NAV.map(n => (
             <a key={n.label} href={n.href} onClick={() => setOpen(false)} style={{
               display: "block", padding: "12px 0",
-              fontSize: 15, fontWeight: 500, color: "#4b5563",
-              textDecoration: "none",
-              borderBottom: "1px solid rgba(15,22,35,0.06)",
+              fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
+              color: "#64748b", textDecoration: "none",
+              borderBottom: "1px solid rgba(255,255,255,0.05)",
             }}>{n.label}</a>
           ))}
           <a href="#contact-form" className="btn-primary" style={{ marginTop: 20, display: "inline-flex" }}>

@@ -63,18 +63,18 @@ const features: { icon: IconFn; title: string; desc: string }[] = [
 
 export default function Platform() {
   return (
-    <section id="platform" style={{ background: "#edf1f5", padding: "100px 28px" }}>
+    <section id="platform" style={{ background: "#0e1326", padding: "100px 28px" }}>
       <div style={{ maxWidth: 1240, margin: "0 auto" }}>
         <div style={{ marginBottom: 64 }}>
           <div className="label">Platform</div>
           <h2 style={{
             fontSize: "clamp(30px, 4.5vw, 52px)", fontWeight: 900,
-            letterSpacing: "-1.5px", color: "#0f1623", lineHeight: 1.1, maxWidth: 640,
+            letterSpacing: "-1.5px", color: "#f1f5f9", lineHeight: 1.1, maxWidth: 640,
           }}>
-            Meet <span style={{ color: "#0d9488" }}>OCCRA</span> —{" "}
+            Meet <span style={{ color: "#22d3ee" }}>OCCRA</span> —{" "}
             our <span className="italic-accent">AIOps engine</span>
           </h2>
-          <p style={{ color: "#4b5563", fontSize: 17, maxWidth: 560, lineHeight: 1.7, marginTop: 20 }}>
+          <p style={{ color: "#94a3b8", fontSize: 17, maxWidth: 560, lineHeight: 1.7, marginTop: 20 }}>
             OCCRA ingests signals from every layer of your stack and uses AI to eliminate alert fatigue, accelerate incident response, and prevent outages before they happen.
           </p>
         </div>
@@ -83,39 +83,35 @@ export default function Platform() {
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: 16,
-          marginBottom: 32,
+          gap: 1,
+          background: "rgba(34,211,238,0.06)",
+          border: "1px solid rgba(34,211,238,0.1)",
+          borderRadius: 16, overflow: "hidden",
+          marginBottom: 48,
         }}>
           {features.map((f, i) => {
             const Icon = f.icon;
             return (
               <div key={f.title} style={{
-                padding: "28px 24px",
-                background: "#ffffff",
-                border: "1px solid rgba(15,22,35,0.08)",
-                borderRadius: 14,
+                padding: "32px 28px",
+                borderRight: i % 3 !== 2 ? "1px solid rgba(34,211,238,0.08)" : "none",
+                borderBottom: i < 3 ? "1px solid rgba(34,211,238,0.08)" : "none",
                 display: "flex", gap: 16, alignItems: "flex-start",
-                transition: "box-shadow 0.2s, border-color 0.2s",
+                transition: "background 0.2s",
               }}
-                onMouseEnter={e => {
-                  (e.currentTarget as HTMLDivElement).style.boxShadow = "0 4px 20px rgba(13,148,136,0.1)";
-                  (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(13,148,136,0.2)";
-                }}
-                onMouseLeave={e => {
-                  (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
-                  (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(15,22,35,0.08)";
-                }}
+                onMouseEnter={e => (e.currentTarget.style.background = "rgba(34,211,238,0.04)")}
+                onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
               >
                 <div style={{
-                  flexShrink: 0, width: 40, height: 40, borderRadius: 10,
-                  border: "1px solid rgba(13,148,136,0.2)", background: "rgba(13,148,136,0.08)",
+                  flexShrink: 0, width: 40, height: 40, borderRadius: 8,
+                  border: "1px solid rgba(34,211,238,0.2)", background: "rgba(34,211,238,0.06)",
                   display: "flex", alignItems: "center", justifyContent: "center",
                 }}>
-                  <Icon size={18} color="#0d9488" />
+                  <Icon size={18} color="#22d3ee" />
                 </div>
                 <div>
-                  <div style={{ fontSize: 15, fontWeight: 700, color: "#0f1623", marginBottom: 5 }}>{f.title}</div>
-                  <div style={{ fontSize: 13, color: "#4b5563", lineHeight: 1.6 }}>{f.desc}</div>
+                  <div style={{ fontSize: 15, fontWeight: 700, color: "#f1f5f9", marginBottom: 5 }}>{f.title}</div>
+                  <div style={{ fontSize: 13, color: "#94a3b8", lineHeight: 1.6 }}>{f.desc}</div>
                 </div>
               </div>
             );
@@ -126,13 +122,12 @@ export default function Platform() {
         <div style={{
           display: "flex", alignItems: "center", justifyContent: "space-between",
           flexWrap: "wrap", gap: 24,
-          background: "#ffffff",
-          border: "1px solid rgba(13,148,136,0.2)",
-          borderRadius: 14, padding: "32px 40px",
+          background: "rgba(34,211,238,0.04)", border: "1px solid rgba(34,211,238,0.15)",
+          borderRadius: 12, padding: "32px 40px",
         }}>
           <div>
-            <div style={{ fontSize: 20, fontWeight: 800, color: "#0f1623", marginBottom: 4, letterSpacing: "-0.4px" }}>Ready to see OCCRA in action?</div>
-            <p style={{ color: "#4b5563", fontSize: 14, margin: 0 }}>Get a personalised demo tailored to your stack and team size.</p>
+            <div style={{ fontSize: 20, fontWeight: 800, color: "#f1f5f9", marginBottom: 4 }}>Ready to see OCCRA in action?</div>
+            <p style={{ color: "#94a3b8", fontSize: 14, margin: 0 }}>Get a personalised demo tailored to your stack and team size.</p>
           </div>
           <a href="#contact-form" className="btn-primary">Request a Demo →</a>
         </div>

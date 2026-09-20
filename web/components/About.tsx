@@ -11,7 +11,7 @@ const expertise = [
 
 export default function About() {
   return (
-    <section id="about" style={{ background: "#f4f7fa", padding: "100px 28px" }}>
+    <section id="about" style={{ background: "#07091a", padding: "100px 28px" }}>
       <div style={{ maxWidth: 1240, margin: "0 auto" }}>
 
         {/* Top — story + expertise */}
@@ -22,17 +22,17 @@ export default function About() {
             <div className="label">About Us</div>
             <h2 style={{
               fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 900,
-              letterSpacing: "-1.5px", color: "#0f1623", lineHeight: 1.1, marginBottom: 24,
+              letterSpacing: "-1.5px", color: "#f1f5f9", lineHeight: 1.1, marginBottom: 24,
             }}>
               A specialist team built for{" "}
               <span className="italic-accent">production-grade infrastructure</span>
             </h2>
-            <p style={{ color: "#4b5563", fontSize: 16, lineHeight: 1.8, marginBottom: 20 }}>
+            <p style={{ color: "#94a3b8", fontSize: 16, lineHeight: 1.8, marginBottom: 20 }}>
               Rootstratum is founded by senior cloud and DevOps engineers who have spent years
               operating infrastructure at hyperscaler scale. We've seen what breaks under
               pressure — and we build systems that don't.
             </p>
-            <p style={{ color: "#4b5563", fontSize: 16, lineHeight: 1.8, marginBottom: 36 }}>
+            <p style={{ color: "#94a3b8", fontSize: 16, lineHeight: 1.8, marginBottom: 36 }}>
               We bring deep specialisations across platform engineering, cloud architecture,
               SRE, FinOps, DevSecOps, and AIOps — so every engagement gets the right
               expert, not a generalist wearing multiple hats.
@@ -45,19 +45,20 @@ export default function About() {
 
           {/* Right — expertise grid */}
           <div>
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9ca3af", marginBottom: 8 }}>
+            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#475569", marginBottom: 8 }}>
               Core Expertise
             </div>
-            <p style={{ fontSize: 13, color: "#9ca3af", marginBottom: 24 }}>Expert-level execution across the full cloud &amp; DevOps stack</p>
-            <div style={{ display: "flex", flexDirection: "column", border: "1px solid rgba(15,22,35,0.08)", borderRadius: 12, overflow: "hidden", background: "#ffffff" }}>
+            <p style={{ fontSize: 13, color: "#64748b", marginBottom: 24 }}>Expert-level execution across the full cloud &amp; DevOps stack</p>
+            <div style={{ display: "flex", flexDirection: "column", border: "1px solid rgba(34,211,238,0.1)", borderRadius: 12, overflow: "hidden" }}>
               {expertise.map((e, i) => (
                 <div key={e.label} style={{
                   display: "flex", alignItems: "center", justifyContent: "space-between",
                   padding: "14px 20px",
-                  borderBottom: i < expertise.length - 1 ? "1px solid rgba(15,22,35,0.06)" : "none",
+                  borderBottom: i < expertise.length - 1 ? "1px solid rgba(34,211,238,0.08)" : "none",
+                  background: "rgba(34,211,238,0.02)",
                 }}>
-                  <span style={{ fontSize: 13, fontWeight: 600, color: "#0f1623" }}>{e.label}</span>
-                  <span style={{ fontSize: 11, color: "#9ca3af", fontWeight: 500 }}>{e.sub}</span>
+                  <span style={{ fontSize: 13, fontWeight: 600, color: "#cbd5e1" }}>{e.label}</span>
+                  <span style={{ fontSize: 11, color: "#475569", fontWeight: 500 }}>{e.sub}</span>
                 </div>
               ))}
             </div>
@@ -68,10 +69,10 @@ export default function About() {
         <div id="founding-team" style={{ scrollMarginTop: 88 }}>
           <div style={{ marginBottom: 32 }}>
             <div className="label">Founding Team</div>
-            <h3 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 900, letterSpacing: "-1px", color: "#0f1623", lineHeight: 1.15 }}>
+            <h3 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 900, letterSpacing: "-1px", color: "#f1f5f9", lineHeight: 1.15 }}>
               Specialists, not generalists
             </h3>
-            <p style={{ color: "#4b5563", fontSize: 15, marginTop: 10, maxWidth: 520 }}>
+            <p style={{ color: "#94a3b8", fontSize: 15, marginTop: 10, maxWidth: 520 }}>
               We're building a founding team of three senior engineers. Every client engagement
               is led by a founder — not delegated to a junior.
             </p>
@@ -79,20 +80,19 @@ export default function About() {
 
           <div style={{
             display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-            gap: 16,
+            gap: 20,
           }}>
             {/* Niket — real founder card */}
             <div style={{
-              background: "#ffffff",
-              border: "2px solid rgba(13,148,136,0.25)",
+              background: "rgba(34,211,238,0.04)",
+              border: "1px solid rgba(34,211,238,0.25)",
               borderRadius: 14, padding: "32px 28px",
               position: "relative", overflow: "hidden",
-              boxShadow: "0 4px 24px rgba(13,148,136,0.08)",
             }}>
               <div style={{
                 position: "absolute", top: 0, right: 0,
                 fontSize: 9, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase",
-                color: "#ffffff", background: "#0d9488",
+                color: "#07091a", background: "#22d3ee",
                 padding: "4px 12px", borderRadius: "0 14px 0 8px",
               }}>Founder</div>
 
@@ -100,18 +100,18 @@ export default function About() {
                 src="/niket.jpg"
                 alt="Niket Joshi"
                 style={{
-                  width: 96, height: 96, borderRadius: "50%",
+                  width: 120, height: 120, borderRadius: "50%",
                   objectFit: "cover",
-                  border: "3px solid rgba(13,148,136,0.3)",
+                  border: "3px solid rgba(34,211,238,0.5)",
                   marginBottom: 20,
                 }}
               />
 
-              <div style={{ fontSize: 18, fontWeight: 800, color: "#0f1623", marginBottom: 4, letterSpacing: "-0.3px" }}>Niket Joshi</div>
-              <div style={{ fontSize: 12, fontWeight: 700, color: "#0d9488", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 12 }}>
+              <div style={{ fontSize: 18, fontWeight: 800, color: "#f1f5f9", marginBottom: 4 }}>Niket Joshi</div>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#22d3ee", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 12 }}>
                 CEO
               </div>
-              <p style={{ fontSize: 13, color: "#4b5563", lineHeight: 1.7, marginBottom: 20 }}>
+              <p style={{ fontSize: 13, color: "#94a3b8", lineHeight: 1.7, marginBottom: 20 }}>
                 17+ years building production infrastructure at scale — OTT live events,
                 FinOps, Kubernetes, multi-cloud architecture. Led cloud engineering for
                 some of India's highest-traffic streaming workloads.
@@ -122,7 +122,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 style={{
                   display: "inline-flex", alignItems: "center", gap: 6,
-                  fontSize: 12, fontWeight: 700, color: "#0d9488",
+                  fontSize: 12, fontWeight: 700, color: "#22d3ee",
                   textDecoration: "none", letterSpacing: "0.04em",
                 }}
               >
@@ -135,60 +135,60 @@ export default function About() {
 
             {/* Co-founder 2 — coming soon */}
             <div style={{
-              background: "#ffffff",
-              border: "1px solid rgba(15,22,35,0.08)",
+              background: "rgba(14,19,38,0.5)",
+              border: "1px solid rgba(34,211,238,0.08)",
               borderRadius: 14, padding: "32px 28px",
               display: "flex", flexDirection: "column", justifyContent: "center",
               minHeight: 260,
             }}>
               <div style={{
                 width: 52, height: 52, borderRadius: "50%",
-                border: "1.5px dashed rgba(13,148,136,0.3)",
+                border: "1.5px dashed rgba(34,211,238,0.3)",
                 display: "flex", alignItems: "center", justifyContent: "center",
                 marginBottom: 16,
               }}>
-                <svg width="20" height="20" fill="none" stroke="rgba(13,148,136,0.4)" strokeWidth="1.5" viewBox="0 0 24 24">
+                <svg width="20" height="20" fill="none" stroke="rgba(34,211,238,0.4)" strokeWidth="1.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>
               </div>
-              <div style={{ fontSize: 15, fontWeight: 700, color: "#4b5563", marginBottom: 6 }}>CTO</div>
+              <div style={{ fontSize: 15, fontWeight: 700, color: "#475569", marginBottom: 6 }}>CTO</div>
               <div style={{
                 fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase",
-                color: "#9ca3af", background: "rgba(15,22,35,0.04)",
-                border: "1px solid rgba(15,22,35,0.08)", borderRadius: 4, padding: "4px 10px",
+                color: "#334155", background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.06)", borderRadius: 4, padding: "4px 10px",
                 display: "inline-block", marginBottom: 14,
               }}>Joining Soon</div>
-              <p style={{ fontSize: 12, color: "#9ca3af", lineHeight: 1.65 }}>
+              <p style={{ fontSize: 12, color: "#334155", lineHeight: 1.65 }}>
                 Technical co-founder. Finalising details.
               </p>
             </div>
 
             {/* Co-founder 3 — coming soon */}
             <div style={{
-              background: "#ffffff",
-              border: "1px solid rgba(15,22,35,0.08)",
+              background: "rgba(14,19,38,0.5)",
+              border: "1px solid rgba(34,211,238,0.08)",
               borderRadius: 14, padding: "32px 28px",
               display: "flex", flexDirection: "column", justifyContent: "center",
               minHeight: 260,
             }}>
               <div style={{
                 width: 52, height: 52, borderRadius: "50%",
-                border: "1.5px dashed rgba(13,148,136,0.3)",
+                border: "1.5px dashed rgba(34,211,238,0.3)",
                 display: "flex", alignItems: "center", justifyContent: "center",
                 marginBottom: 16,
               }}>
-                <svg width="20" height="20" fill="none" stroke="rgba(13,148,136,0.4)" strokeWidth="1.5" viewBox="0 0 24 24">
+                <svg width="20" height="20" fill="none" stroke="rgba(34,211,238,0.4)" strokeWidth="1.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>
               </div>
-              <div style={{ fontSize: 15, fontWeight: 700, color: "#4b5563", marginBottom: 6 }}>Head of Delivery</div>
+              <div style={{ fontSize: 15, fontWeight: 700, color: "#475569", marginBottom: 6 }}>Head of Delivery</div>
               <div style={{
                 fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase",
-                color: "#9ca3af", background: "rgba(15,22,35,0.04)",
-                border: "1px solid rgba(15,22,35,0.08)", borderRadius: 4, padding: "4px 10px",
+                color: "#334155", background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.06)", borderRadius: 4, padding: "4px 10px",
                 display: "inline-block", marginBottom: 14,
               }}>Joining Soon</div>
-              <p style={{ fontSize: 12, color: "#9ca3af", lineHeight: 1.65 }}>
+              <p style={{ fontSize: 12, color: "#334155", lineHeight: 1.65 }}>
                 Delivery co-founder. Finalising details.
               </p>
             </div>
