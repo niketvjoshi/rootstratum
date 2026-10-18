@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display, Space_Mono } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const inter    = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -137,17 +136,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} ${mono.variable}`} style={{ fontFamily: "var(--font-inter, Inter, system-ui, sans-serif)" }}>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18520733153"
-          strategy="afterInteractive"
-        />
-        <Script id="gtag-init" strategy="afterInteractive">{`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-18520733153');
-          gtag('config', 'G-K37BHD175P');
-        `}</Script>
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18520733153" />
+        <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18520733153');gtag('config','G-K37BHD175P');` }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
