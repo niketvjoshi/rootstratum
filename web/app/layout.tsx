@@ -138,15 +138,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} ${mono.variable}`} style={{ fontFamily: "var(--font-inter, Inter, system-ui, sans-serif)" }}>
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-K37BHD175P"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18520733153"
           strategy="afterInteractive"
         />
-        <Script id="ga4-init" strategy="afterInteractive">{`
+        <Script id="gtag-init" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-K37BHD175P');
           gtag('config', 'AW-18520733153');
+          gtag('config', 'G-K37BHD175P');
         `}</Script>
         <script
           type="application/ld+json"
