@@ -130,6 +130,13 @@ export default function Contact() {
                       throw new Error(d.error || "Something went wrong");
                     }
                     setSent(true);
+                    if (typeof window !== "undefined" && typeof (window as any).gtag === "function") {
+                      (window as any).gtag("event", "conversion", {
+                        send_to: "AW-18520733153/qxV7CPmvqKEdEOHrr_9E",
+                        value: 1.0,
+                        currency: "INR",
+                      });
+                    }
                   } catch (err: unknown) {
                     setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
                   } finally {
