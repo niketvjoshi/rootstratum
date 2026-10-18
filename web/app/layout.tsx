@@ -146,6 +146,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-K37BHD175P');
+          gtag('config', 'AW-18520733153');
         `}</Script>
         <script
           type="application/ld+json"
