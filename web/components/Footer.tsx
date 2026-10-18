@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer style={{ background: "#07091a", borderTop: "1px solid rgba(34,211,238,0.08)", padding: "64px 28px 36px" }}>
@@ -74,9 +76,8 @@ export default function Footer() {
         }}>
           <span style={{ fontSize: 12, color: "#334155" }}>© 2026 Rootstratum. All rights reserved.</span>
           <div style={{ display: "flex", gap: 24 }}>
-            {["Privacy Policy", "Terms of Service"].map(l => (
-              <a key={l} href="#" style={{ fontSize: 12, color: "#334155", textDecoration: "none" }}>{l}</a>
-            ))}
+            <Link href="/privacy" style={{ fontSize: 12, color: "#334155", textDecoration: "none" }}>Privacy Policy</Link>
+            <Link href="/terms" style={{ fontSize: 12, color: "#334155", textDecoration: "none" }}>Terms of Service</Link>
           </div>
         </div>
       </div>
