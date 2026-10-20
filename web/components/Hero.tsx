@@ -13,7 +13,7 @@ const LINES: { type: LineType; text: string }[] = [
   { type: "comment", text: "# Analysing cost opportunities..." },
   { type: "out",     text: "✓ Graviton migration: -41% compute cost" },
   { type: "out",     text: "✓ Spot workloads: -63% on batch jobs" },
-  { type: "comment", text: "# OCCRA AIOps scan complete..." },
+  { type: "comment", text: "# Helios AIOps scan complete..." },
   { type: "out",     text: "✓ Alert noise reduced: 87% fewer pages" },
   { type: "warn",    text: "⚠ 3 nodes over-provisioned → save $420/mo" },
 ];

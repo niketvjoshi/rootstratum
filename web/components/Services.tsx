@@ -48,7 +48,7 @@ const services = [
     title: "AIOps & Observability",
     desc: "AI-powered root cause analysis and intelligent alerting. Stop chasing noise — fix what matters, before your users notice.",
     bullets: [
-      "OCCRA AIOps Platform",
+      "Helios AIOps Platform",
       "Prometheus / Grafana / Loki Stack",
       "Distributed Tracing (Tempo/Jaeger)",
       "SLO / SLA Design & Error Budgets",

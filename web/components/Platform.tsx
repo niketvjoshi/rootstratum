@@ -71,11 +71,11 @@ export default function Platform() {
             fontSize: "clamp(30px, 4.5vw, 52px)", fontWeight: 900,
             letterSpacing: "-1.5px", color: "#f1f5f9", lineHeight: 1.1, maxWidth: 640,
           }}>
-            Meet <span style={{ color: "#22d3ee" }}>OCCRA</span> —{" "}
+            Meet <span style={{ color: "#22d3ee" }}>Helios</span> —{" "}
             our <span className="italic-accent">AIOps engine</span>
           </h2>
           <p style={{ color: "#94a3b8", fontSize: 17, maxWidth: 560, lineHeight: 1.7, marginTop: 20 }}>
-            OCCRA ingests signals from every layer of your stack and uses AI to eliminate alert fatigue, accelerate incident response, and prevent outages before they happen.
+            Helios ingests signals from every layer of your stack and uses AI to eliminate alert fatigue, accelerate incident response, and prevent outages before they happen.
           </p>
         </div>
 
@@ -126,7 +126,7 @@ export default function Platform() {
           borderRadius: 12, padding: "32px 40px",
         }}>
           <div>
-            <div style={{ fontSize: 20, fontWeight: 800, color: "#f1f5f9", marginBottom: 4 }}>Ready to see OCCRA in action?</div>
+            <div style={{ fontSize: 20, fontWeight: 800, color: "#f1f5f9", marginBottom: 4 }}>Ready to see Helios in action?</div>
             <p style={{ color: "#94a3b8", fontSize: 14, margin: 0 }}>Get a personalised demo tailored to your stack and team size.</p>
           </div>
           <a href="#contact-form" className="btn-primary">Request a Demo →</a>

@@ -117,7 +117,7 @@ const jsonLd = {
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "DevSecOps" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cloud Architecture & Migration" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Platform Engineering" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "AIOps (OCCRA)" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "AIOps (Helios)" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "FinOps & Cost Optimisation" } },
         ],
       },

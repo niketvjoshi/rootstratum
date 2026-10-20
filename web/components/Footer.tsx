@@ -26,7 +26,7 @@ export default function Footer() {
           {/* Services */}
           <div>
             <div style={{ fontSize: 11, fontWeight: 800, color: "#f1f5f9", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 18 }}>Services</div>
-            {["DevOps Engineering", "DevSecOps", "Cloud Architecture", "Cloud Migration", "Cost Optimisation", "AIOps (OCCRA)"].map(l => (
+            {["DevOps Engineering", "DevSecOps", "Cloud Architecture", "Cloud Migration", "Cost Optimisation", "AIOps (Helios)"].map(l => (
               <a key={l} href="#services" style={{
                 display: "block", color: "#475569", fontSize: 13,
                 textDecoration: "none", marginBottom: 10, transition: "color 0.2s",

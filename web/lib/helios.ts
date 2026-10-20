@@ -1,8 +1,8 @@
 /**
- * OCCRA custom instrumentation client for rootstratum.com
+ * Helios custom instrumentation client for rootstratum.com
  *
- * Sends alerts and business events to OCCRA's webhook ingest endpoint
- * using OCCRA's flat event format (title + severity).
+ * Sends alerts and business events to Helios's webhook ingest endpoint
+ * using Helios's flat event format (title + severity).
  *
  * Required env vars:
  *   OCCRA_ENDPOINT      e.g. http://65.0.246.204
@@ -12,7 +12,7 @@
 
 type Severity = 'critical' | 'high' | 'medium' | 'low'
 
-interface OccraEvent {
+interface HeliosEvent {
   title: string
   severity: Severity
   description?: string
@@ -29,7 +29,7 @@ const TENANT_SLUG = process.env.OCCRA_TENANT_SLUG ?? 'occra'
 const SERVICE     = process.env.OTEL_SERVICE_NAME ?? 'rootstratum-website'
 const ENV         = process.env.NODE_ENV ?? 'production'
 
-function send(event: OccraEvent): void {
+function send(event: HeliosEvent): void {
   if (!ENDPOINT || !SECRET) return   // not configured — no-op
 
   const payload = {
@@ -52,8 +52,8 @@ function send(event: OccraEvent): void {
   }).catch(() => { /* best-effort */ })
 }
 
-export const occra = {
-  /** Application error — creates a high-severity OCCRA alert */
+export const helios = {
+  /** Application error — creates a high-severity Helios alert */
   error(title: string, fields?: Record<string, unknown>): void {
     send({
       title,
@@ -67,7 +67,7 @@ export const occra = {
     })
   },
 
-  /** Business event — low-severity informational OCCRA alert */
+  /** Business event — low-severity informational Helios alert */
   event(name: string, fields?: Record<string, unknown>): void {
     send({
       title:       name,
