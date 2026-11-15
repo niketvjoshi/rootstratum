@@ -1,5 +1,19 @@
 const plans = [
   {
+    emoji: "🔍",
+    name: "Cloud Cost Audit",
+    meta: "Fixed price · 5 business days",
+    desc: "The fastest way to start. We review your AWS, GCP or Azure spend and architecture, and hand you a written report with prioritised savings you can act on immediately.",
+    bullets: [
+      "Fixed price, agreed before we start",
+      "Written report in 5 business days",
+      "Savings ranked by impact and effort",
+      "Walkthrough call with your team",
+    ],
+    cta: "Book an Audit →",
+    popular: false,
+  },
+  {
     emoji: "🎯",
     name: "Fixed-Scope Project",
     meta: "One-time · 2–12 weeks",
@@ -21,55 +35,12 @@ const plans = [
     bullets: [
       "Dedicated async-first engineer",
       "Up to 60 hours / month",
-      "Incident escalation support",
+      "Incident escalation with agreed response times",
       "Monthly architecture review",
       "Cancel with 30-day notice",
     ],
     cta: "Start Conversation →",
     popular: true,
-  },
-  {
-    emoji: "🏗️",
-    name: "Fractional Head of Platform",
-    meta: "Strategic · 1–2 days / week",
-    desc: "For startups and scale-ups that need senior platform leadership without the full-time overhead. Own your platform roadmap, vendor decisions and team upskilling.",
-    bullets: [
-      "Platform roadmap ownership",
-      "Hiring & vendor advisory",
-      "Engineering team mentoring",
-      "Board / CTO reporting",
-    ],
-    cta: "Let's Talk →",
-    popular: false,
-  },
-  {
-    emoji: "⚙️",
-    name: "Managed Services",
-    meta: "Ongoing · SLA-backed",
-    desc: "We run your cloud and platform infrastructure end-to-end — monitoring, incident response, patching, and continuous optimisation — so your team can focus on product.",
-    bullets: [
-      "24×7 monitoring & alerting",
-      "Incident response & RCA",
-      "Patch management & upgrades",
-      "Monthly cost & security review",
-      "Defined SLA with escalation path",
-    ],
-    cta: "Discuss Requirements →",
-    popular: false,
-  },
-  {
-    emoji: "🕐",
-    name: "Time & Materials",
-    meta: "Flexible · Pay as you go",
-    desc: "Need expert hours without a long commitment? Engage us on a T&M basis for audits, troubleshooting, architecture reviews, or ad-hoc engineering work.",
-    bullets: [
-      "Billed per hour, no minimums",
-      "Senior engineer on every ticket",
-      "Ideal for one-off audits & reviews",
-      "Quick start — no long SOW needed",
-    ],
-    cta: "Get a Quote →",
-    popular: false,
   },
 ];
 

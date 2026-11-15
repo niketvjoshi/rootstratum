@@ -87,7 +87,7 @@ export default function Hero() {
                 { value: "17+",    label: "Years of Experience" },
                 { value: "3",      label: "Cloud Platforms" },
                 { value: "₹1.5Cr", label: "AWS Cost Eliminated" },
-                { value: "99.99%", label: "Uptime SLA" },
+                { value: "5 days", label: "Audit Turnaround" },
               ].map((s, i) => (
                 <div key={i} style={{
                   flex: "1 1 120px", paddingRight: 32,

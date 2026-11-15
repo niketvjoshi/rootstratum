@@ -28,14 +28,14 @@ export default function About() {
               <span className="italic-accent">production-grade infrastructure</span>
             </h2>
             <p style={{ color: "#94a3b8", fontSize: 16, lineHeight: 1.8, marginBottom: 20 }}>
-              Rootstratum is founded by senior cloud and DevOps engineers who have spent years
+              RootStratum is a senior-led cloud and DevOps consultancy, built on years of
               operating infrastructure at hyperscaler scale. We've seen what breaks under
               pressure — and we build systems that don't.
             </p>
             <p style={{ color: "#94a3b8", fontSize: 16, lineHeight: 1.8, marginBottom: 36 }}>
               We bring deep specialisations across platform engineering, cloud architecture,
-              SRE, FinOps, DevSecOps, and AIOps — so every engagement gets the right
-              expert, not a generalist wearing multiple hats.
+              SRE, FinOps, DevSecOps, and AIOps — so every engagement is led by senior,
+              hands-on expertise, never handed to a junior.
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <a href="#contact-form" className="btn-primary">Work with Our Team</a>
@@ -68,13 +68,13 @@ export default function About() {
         {/* Founding Team */}
         <div id="founding-team" style={{ scrollMarginTop: 88 }}>
           <div style={{ marginBottom: 32 }}>
-            <div className="label">Founding Team</div>
+            <div className="label">Leadership</div>
             <h3 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 900, letterSpacing: "-1px", color: "#f1f5f9", lineHeight: 1.15 }}>
               Specialists, not generalists
             </h3>
             <p style={{ color: "#94a3b8", fontSize: 15, marginTop: 10, maxWidth: 520 }}>
-              We're building a founding team of three senior engineers. Every client engagement
-              is led by a founder — not delegated to a junior.
+              Every client engagement is led by a senior engineer with real production
+              experience — not delegated to a junior.
             </p>
           </div>
 
@@ -131,66 +131,6 @@ export default function About() {
                 </svg>
                 LinkedIn Profile
               </a>
-            </div>
-
-            {/* Co-founder 2 — coming soon */}
-            <div style={{
-              background: "rgba(14,19,38,0.5)",
-              border: "1px solid rgba(34,211,238,0.08)",
-              borderRadius: 14, padding: "32px 28px",
-              display: "flex", flexDirection: "column", justifyContent: "center",
-              minHeight: 260,
-            }}>
-              <div style={{
-                width: 52, height: 52, borderRadius: "50%",
-                border: "1.5px dashed rgba(34,211,238,0.3)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                marginBottom: 16,
-              }}>
-                <svg width="20" height="20" fill="none" stroke="rgba(34,211,238,0.4)" strokeWidth="1.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                </svg>
-              </div>
-              <div style={{ fontSize: 15, fontWeight: 700, color: "#475569", marginBottom: 6 }}>CTO</div>
-              <div style={{
-                fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase",
-                color: "#334155", background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.06)", borderRadius: 4, padding: "4px 10px",
-                display: "inline-block", marginBottom: 14,
-              }}>Joining Soon</div>
-              <p style={{ fontSize: 12, color: "#334155", lineHeight: 1.65 }}>
-                Technical co-founder. Finalising details.
-              </p>
-            </div>
-
-            {/* Co-founder 3 — coming soon */}
-            <div style={{
-              background: "rgba(14,19,38,0.5)",
-              border: "1px solid rgba(34,211,238,0.08)",
-              borderRadius: 14, padding: "32px 28px",
-              display: "flex", flexDirection: "column", justifyContent: "center",
-              minHeight: 260,
-            }}>
-              <div style={{
-                width: 52, height: 52, borderRadius: "50%",
-                border: "1.5px dashed rgba(34,211,238,0.3)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                marginBottom: 16,
-              }}>
-                <svg width="20" height="20" fill="none" stroke="rgba(34,211,238,0.4)" strokeWidth="1.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                </svg>
-              </div>
-              <div style={{ fontSize: 15, fontWeight: 700, color: "#475569", marginBottom: 6 }}>Head of Delivery</div>
-              <div style={{
-                fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase",
-                color: "#334155", background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.06)", borderRadius: 4, padding: "4px 10px",
-                display: "inline-block", marginBottom: 14,
-              }}>Joining Soon</div>
-              <p style={{ fontSize: 12, color: "#334155", lineHeight: 1.65 }}>
-                Delivery co-founder. Finalising details.
-              </p>
             </div>
           </div>
         </div>

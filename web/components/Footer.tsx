@@ -40,7 +40,7 @@ export default function Footer() {
           {/* Engage */}
           <div>
             <div style={{ fontSize: 11, fontWeight: 800, color: "#f1f5f9", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 18 }}>Engage</div>
-            {["Fixed-Scope Project", "Monthly Retainer", "Fractional Head of Platform", "Book a Consultation"].map(l => (
+            {["Cloud Cost Audit", "Fixed-Scope Project", "Monthly Retainer", "Book a Consultation"].map(l => (
               <a key={l} href="#engagement" style={{
                 display: "block", color: "#475569", fontSize: 13,
                 textDecoration: "none", marginBottom: 10, transition: "color 0.2s",
@@ -74,7 +74,7 @@ export default function Footer() {
           paddingTop: 24,
           display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12,
         }}>
-          <span style={{ fontSize: 12, color: "#334155" }}>© 2026 Rootstratum. All rights reserved.</span>
+          <span style={{ fontSize: 12, color: "#334155" }}>© 2026 RootStratum. All rights reserved.</span>
           <div style={{ display: "flex", gap: 24 }}>
             <Link href="/privacy" style={{ fontSize: 12, color: "#334155", textDecoration: "none" }}>Privacy Policy</Link>
             <Link href="/terms" style={{ fontSize: 12, color: "#334155", textDecoration: "none" }}>Terms of Service</Link>

@@ -113,7 +113,7 @@ export default function Contact() {
                   Send us a message
                 </h3>
                 <p style={{ fontSize: 13, color: "#475569", marginBottom: 28 }}>
-                  Prefer async? Fill this in and we'll get back to you within 24 hours.
+                  Prefer async? Fill this in and we'll get back to you within one business day.
                 </p>
                 <form onSubmit={async e => {
                   e.preventDefault();

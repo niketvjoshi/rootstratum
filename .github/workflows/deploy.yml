@@ -7,7 +7,7 @@ on:
 
 permissions:
   id-token: write   # required for OIDC
-  contents: read
+  contents: write   # required to push the deploy tag
 
 env:
   AWS_REGION: ap-south-1
@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history and tags, needed to work out the next version
 
       - name: Setup Node 20
         uses: actions/setup-node@v4
@@ -106,3 +108,40 @@ jobs:
 
           echo "Timed out waiting for deployment."
           exit 1
+
+      - name: Tag this deploy
+        run: |
+          # Next version from the commits since the last vX.Y.Z tag:
+          # breaking change -> major, feat -> minor, anything else -> patch.
+          LAST=$(git tag --list 'v[0-9]*.[0-9]*.[0-9]*' --sort=-v:refname | head -n1)
+          if [[ -z "$LAST" ]]; then
+            echo "No existing vX.Y.Z tag found; skipping tagging."
+            exit 0
+          fi
+          if [[ -n "$(git tag --points-at HEAD --list 'v[0-9]*')" ]]; then
+            echo "This commit is already tagged; nothing to do."
+            exit 0
+          fi
+          IFS=. read -r MAJOR MINOR PATCH <<< "${LAST#v}"
+          SUBJECTS=$(git log --format=%s "$LAST"..HEAD)
+          BODIES=$(git log --format=%b "$LAST"..HEAD)
+          if grep -qE '^[a-z]+(\([^)]*\))?!:' <<< "$SUBJECTS" || grep -q 'BREAKING CHANGE' <<< "$BODIES"; then
+            MAJOR=$((MAJOR + 1)); MINOR=0; PATCH=0
+          elif grep -qE '^feat(\([^)]*\))?:' <<< "$SUBJECTS"; then
+            MINOR=$((MINOR + 1)); PATCH=0
+          else
+            PATCH=$((PATCH + 1))
+          fi
+          TAG="v${MAJOR}.${MINOR}.${PATCH}"
+          git tag "$TAG" "${{ github.sha }}"
+          git push origin "$TAG"
+          echo "Tagged ${{ github.sha }} as $TAG (previous: $LAST)"
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id E3TLWGA4WUF6MC \
+            --paths "/*" \
+            --query "Invalidation.Id" \
+            --output text
+          echo "CloudFront invalidation submitted."

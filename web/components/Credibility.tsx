@@ -39,7 +39,7 @@ export default function Credibility() {
             letterSpacing: "-1.5px", color: "#f1f5f9", lineHeight: 1.1, maxWidth: 680,
           }}>
             Real Scale. Real Results.{" "}
-            <span className="italic-accent">Before Rootstratum.</span>
+            <span className="italic-accent">Before RootStratum.</span>
           </h2>
         </div>
         <p style={{ color: "#64748b", fontSize: 15, maxWidth: 620, marginBottom: 64, lineHeight: 1.7 }}>

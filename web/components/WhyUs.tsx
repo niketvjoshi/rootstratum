@@ -37,7 +37,7 @@ export default function WhyUs() {
     <section id="why-us" style={{ background: "#050b18", padding: "100px 24px" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: 64 }}>
-          <div className="section-label" style={{ justifyContent: "center" }}>Why Rootstratum</div>
+          <div className="section-label" style={{ justifyContent: "center" }}>Why RootStratum</div>
           <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 800, letterSpacing: "-1px", color: "#f1f5f9", marginBottom: 16 }}>
             Built for teams that can&apos;t
             <br />
