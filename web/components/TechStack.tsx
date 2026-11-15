@@ -48,7 +48,7 @@ export default function TechStack() {
           </h2>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 1, background: "rgba(34,211,238,0.06)", border: "1px solid rgba(34,211,238,0.1)", borderRadius: 16, overflow: "hidden" }}>
+        <div className="tech-grid" style={{ display: "grid", gap: 1, background: "rgba(34,211,238,0.06)", border: "1px solid rgba(34,211,238,0.1)", borderRadius: 16, overflow: "hidden" }}>
           {categories.map((cat, i) => (
             <div key={cat.label} style={{
               padding: "28px 24px",

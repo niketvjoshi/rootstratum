@@ -183,3 +183,8 @@ body {
   border-radius: 2px;
   margin-bottom: 20px;
 }
+
+/* Tech stack: 8 categories → 4 × 2 on desktop, fewer columns on smaller screens */
+.tech-grid { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 960px) { .tech-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .tech-grid { grid-template-columns: 1fr; } }
