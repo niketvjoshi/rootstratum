@@ -36,18 +36,16 @@ export default function Process() {
           </h2>
         </div>
 
-        <div style={{
+        <div className="grid-4" style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-          gap: 2,
+          gap: 0,
           background: "rgba(34,211,238,0.06)",
           border: "1px solid rgba(34,211,238,0.12)",
           borderRadius: 16, overflow: "hidden",
         }}>
           {steps.map((s, i) => (
-            <div key={s.n} style={{
+            <div key={s.n} className="cell" style={{
               padding: "40px 32px",
-              borderRight: i < steps.length - 1 ? "1px solid rgba(34,211,238,0.1)" : "none",
               position: "relative",
             }}>
               <div style={{

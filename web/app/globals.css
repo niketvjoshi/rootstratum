@@ -189,19 +189,19 @@ body {
 @media (max-width: 960px) { .tech-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .tech-grid { grid-template-columns: 1fr; } }
 
-/* Kanvas feature tiles: 3 × 2 on desktop, 2 × 3 on tablet, 1 column on phones */
-.kanvas-grid { grid-template-columns: repeat(3, 1fr); }
-.kanvas-tile { border-right: 1px solid rgba(34,211,238,0.08); border-bottom: 1px solid rgba(34,211,238,0.08); }
-.kanvas-tile:nth-child(3n) { border-right: none; }
-.kanvas-tile:nth-child(n+4) { border-bottom: none; }
-@media (max-width: 960px) {
-  .kanvas-grid { grid-template-columns: repeat(2, 1fr); }
-  .kanvas-tile, .kanvas-tile:nth-child(3n) { border-right: 1px solid rgba(34,211,238,0.08); border-bottom: 1px solid rgba(34,211,238,0.08); }
-  .kanvas-tile:nth-child(2n) { border-right: none; }
-  .kanvas-tile:nth-child(n+5) { border-bottom: none; }
+/* Card grids: fixed column counts so rows always fill evenly (no orphan/empty cells) */
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-6 { grid-template-columns: repeat(3, 1fr); }
+/* Divider lines between tiles; edge lines are clipped by the container's overflow:hidden */
+.cell { box-shadow: 1px 0 0 0 rgba(34,211,238,0.08), 0 1px 0 0 rgba(34,211,238,0.08); }
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 560px) {
-  .kanvas-grid { grid-template-columns: 1fr; }
-  .kanvas-tile, .kanvas-tile:nth-child(2n), .kanvas-tile:nth-child(3n) { border-right: none; border-bottom: 1px solid rgba(34,211,238,0.08); }
-  .kanvas-tile:last-child { border-bottom: none; }
+@media (max-width: 900px) {
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-6 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .grid-4, .grid-6 { grid-template-columns: 1fr; }
 }

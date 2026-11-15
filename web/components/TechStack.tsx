@@ -49,7 +49,7 @@ export default function TechStack() {
         </div>
 
         <div className="tech-grid" style={{ display: "grid", gap: 1, background: "rgba(34,211,238,0.06)", border: "1px solid rgba(34,211,238,0.1)", borderRadius: 16, overflow: "hidden" }}>
-          {categories.map((cat, i) => (
+          {categories.map((cat) => (
             <div key={cat.label} style={{
               padding: "28px 24px",
               borderRight: "1px solid rgba(34,211,238,0.08)",

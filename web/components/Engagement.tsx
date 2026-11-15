@@ -62,7 +62,7 @@ export default function Engagement() {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20 }}>
+        <div className="grid-3" style={{ display: "grid", gap: 20 }}>
           {plans.map(p => (
             <div key={p.name} style={{
               background: p.popular ? "rgba(34,211,238,0.05)" : "rgba(14,19,38,0.8)",

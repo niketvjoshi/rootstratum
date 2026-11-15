@@ -83,19 +83,16 @@ export default function Services() {
           </h2>
         </div>
 
-        <div style={{
+        <div className="grid-6" style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
-          gap: 1,
+          gap: 0,
           background: "rgba(34,211,238,0.06)",
           border: "1px solid rgba(34,211,238,0.1)",
           borderRadius: 16, overflow: "hidden",
         }}>
-          {services.map((s, i) => (
-            <div key={s.title} style={{
+          {services.map((s) => (
+            <div key={s.title} className="cell" style={{
               padding: "36px 32px",
-              borderRight: i % 2 === 0 ? "1px solid rgba(34,211,238,0.08)" : "none",
-              borderBottom: i < services.length - 2 ? "1px solid rgba(34,211,238,0.08)" : "none",
               transition: "background 0.2s",
             }}
               onMouseEnter={e => (e.currentTarget.style.background = "rgba(34,211,238,0.03)")}

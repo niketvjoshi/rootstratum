@@ -94,7 +94,7 @@ export default function Kanvas() {
         </div>
 
         {/* Feature grid */}
-        <div className="kanvas-grid" style={{
+        <div className="grid-6" style={{
           display: "grid",
           gap: 0,
           background: "rgba(34,211,238,0.06)",
@@ -103,7 +103,7 @@ export default function Kanvas() {
           marginBottom: 24,
         }}>
           {features.map((f, i) => (
-            <div key={f.title} className="kanvas-tile" style={{
+            <div key={f.title} className="cell" style={{
               padding: "32px 28px",
               display: "flex", gap: 16, alignItems: "flex-start",
               transition: "background 0.2s",

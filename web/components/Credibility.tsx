@@ -48,16 +48,15 @@ export default function Credibility() {
         </p>
 
         {/* Achievement cards */}
-        <div style={{
-          display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-          gap: 1, background: "rgba(34,211,238,0.06)",
+        <div className="grid-3" style={{
+          display: "grid",
+          gap: 0, background: "rgba(34,211,238,0.06)",
           border: "1px solid rgba(34,211,238,0.1)", borderRadius: 16, overflow: "hidden",
           marginBottom: 64,
         }}>
           {achievements.map((a, i) => (
-            <div key={i} style={{
+            <div key={i} className="cell" style={{
               padding: "40px 36px",
-              borderRight: i < achievements.length - 1 ? "1px solid rgba(34,211,238,0.08)" : "none",
             }}>
               <div style={{
                 fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900,

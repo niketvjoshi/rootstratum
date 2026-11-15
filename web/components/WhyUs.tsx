@@ -46,7 +46,7 @@ export default function WhyUs() {
         </div>
 
         {/* Pillars */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24, marginBottom: 72 }}>
+        <div className="grid-4" style={{ display: "grid", gap: 24, marginBottom: 72 }}>
           {pillars.map((p) => (
             <div key={p.number} className="gradient-border-card" style={{ borderRadius: 14, padding: "28px 24px" }}>
               <div style={{
