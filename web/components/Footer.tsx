@@ -21,6 +21,22 @@ export default function Footer() {
             <a href="mailto:sales@rootstratum.com" style={{ fontSize: 13, color: "#22d3ee", textDecoration: "none" }}>
               sales@rootstratum.com
             </a>
+            <div style={{ marginTop: 18 }}>
+              <a
+                href="https://www.linkedin.com/company/rootstratum"
+                target="_blank" rel="noopener noreferrer"
+                aria-label="RootStratum on LinkedIn" title="Follow RootStratum on LinkedIn"
+                style={{
+                  display: "inline-flex", alignItems: "center", justifyContent: "center",
+                  width: 36, height: 36, borderRadius: 8,
+                  border: "1px solid rgba(34,211,238,0.25)", color: "#22d3ee",
+                  fontSize: 15, fontWeight: 800, letterSpacing: "-0.5px",
+                  textDecoration: "none", transition: "background 0.2s, color 0.2s",
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = "#22d3ee"; e.currentTarget.style.color = "#07091a"; }}
+                onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#22d3ee"; }}
+              >in</a>
+            </div>
           </div>
 
           {/* Services */}
