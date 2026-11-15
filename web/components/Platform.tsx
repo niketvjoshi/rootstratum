@@ -87,9 +87,9 @@ export default function Platform() {
         }}>
           <img
             src="/helios-dashboard.jpg"
-            alt="The Helios service summary for a demo checkout service, showing open issues, the last deployment, service levels and charts for response time, throughput, error rate and Apdex"
-            width={1456}
-            height={690}
+            alt="The Helios overview screen, showing active incidents, P1 incidents, alerts in the last 24 hours, auto-correlation, an incident summary, and links to alert correlation, change intelligence and remediation plans"
+            width={1512}
+            height={476}
             loading="lazy"
             style={{ display: "block", width: "100%", height: "auto" }}
           />
