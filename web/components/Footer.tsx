@@ -63,7 +63,7 @@ export default function Footer() {
           {/* Engage */}
           <div>
             <div style={{ fontSize: 11, fontWeight: 800, color: "#f1f5f9", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 18 }}>Engage</div>
-            {["Cloud Cost Audit", "Fixed-Scope Project", "Monthly Retainer", "Book a Consultation"].map(l => (
+            {["Cloud Cost Audit", "Fixed-Scope Project", "Time & Materials", "Managed Services", "Book a Consultation"].map(l => (
               <a key={l} href="#engagement" style={{
                 display: "block", color: "#475569", fontSize: 13,
                 textDecoration: "none", marginBottom: 10, transition: "color 0.2s",

@@ -205,12 +205,3 @@ body {
 @media (max-width: 600px) {
   .grid-4, .grid-6 { grid-template-columns: 1fr; }
 }
-
-/* Engagement plans: 5 cards → 3 on the first row, 2 wider on the second (no empty cell) */
-.grid-plans { grid-template-columns: repeat(6, 1fr); }
-.grid-plans > * { grid-column: span 2; }
-.grid-plans > *:nth-child(n+4) { grid-column: span 3; }
-@media (max-width: 900px) {
-  .grid-plans { grid-template-columns: 1fr; }
-  .grid-plans > *, .grid-plans > *:nth-child(n+4) { grid-column: auto; }
-}

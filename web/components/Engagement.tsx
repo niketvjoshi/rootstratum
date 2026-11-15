@@ -28,33 +28,19 @@ const plans = [
     popular: false,
   },
   {
-    emoji: "🔄",
-    name: "Monthly Retainer",
-    meta: "Ongoing · Rolling monthly",
-    desc: "Your infrastructure never stands still. Get a dedicated Senior DevOps / Cloud engineer embedded with your team — planning, execution and on-call escalation.",
+    emoji: "⏱️",
+    name: "Time & Materials",
+    meta: "Flexible scope · Billed monthly",
+    desc: "A dedicated senior DevOps / Cloud engineer embedded with your team. You pay for the hours actually worked, so priorities can change without renegotiating a contract.",
     bullets: [
       "Dedicated async-first engineer",
-      "Up to 60 hours / month",
-      "Incident escalation with agreed response times",
-      "Monthly architecture review",
+      "Scope adapts as priorities change",
+      "Transparent timesheets and monthly invoices",
+      "Scale up or down at short notice",
       "Cancel with 30-day notice",
     ],
     cta: "Start Conversation →",
     popular: true,
-  },
-  {
-    emoji: "⏱️",
-    name: "Time & Materials",
-    meta: "Flexible scope · Billed monthly",
-    desc: "For work where scope will evolve. Engineers join your team and you pay for the hours actually worked, so priorities can change without renegotiating a contract.",
-    bullets: [
-      "Pay only for hours worked",
-      "Scope adapts as priorities change",
-      "Transparent timesheets and monthly invoices",
-      "Scale the team up or down at short notice",
-    ],
-    cta: "Discuss Your Needs →",
-    popular: false,
   },
   {
     emoji: "🛡️",
@@ -90,7 +76,7 @@ export default function Engagement() {
           </p>
         </div>
 
-        <div className="grid-plans" style={{ display: "grid", gap: 20 }}>
+        <div className="grid-4" style={{ display: "grid", gap: 20 }}>
           {plans.map(p => (
             <div key={p.name} style={{
               background: p.popular ? "rgba(34,211,238,0.05)" : "rgba(14,19,38,0.8)",
