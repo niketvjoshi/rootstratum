@@ -16,7 +16,7 @@ const categories = [
     items: ["Jenkins", "GitHub Actions", "ArgoCD", "Argo Rollouts"],
   },
   {
-    label: "Observability",
+    label: "AIOps / Observability",
     items: ["Prometheus", "Grafana", "Loki", "Tempo", "New Relic", "Datadog", "Helios"],
   },
   {
