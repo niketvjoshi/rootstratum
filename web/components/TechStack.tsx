@@ -17,7 +17,7 @@ const categories = [
   },
   {
     label: "Observability",
-    items: ["Prometheus", "Grafana", "Loki", "Tempo", "New Relic", "Datadog"],
+    items: ["Prometheus", "Grafana", "Loki", "Tempo", "New Relic", "Datadog", "Helios"],
   },
   {
     label: "DevSecOps",
@@ -30,10 +30,6 @@ const categories = [
   {
     label: "Database",
     items: ["PostgreSQL", "Aurora", "Redis", "DynamoDB", "MySQL"],
-  },
-  {
-    label: "AIOps",
-    items: ["Helios", "OpenTelemetry", "MLflow", "Bedrock LLM"],
   },
 ];
 
