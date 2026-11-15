@@ -94,20 +94,17 @@ export default function Kanvas() {
         </div>
 
         {/* Feature grid */}
-        <div style={{
+        <div className="kanvas-grid" style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: 1,
+          gap: 0,
           background: "rgba(34,211,238,0.06)",
           border: "1px solid rgba(34,211,238,0.1)",
           borderRadius: 16, overflow: "hidden",
           marginBottom: 24,
         }}>
           {features.map((f, i) => (
-            <div key={f.title} style={{
+            <div key={f.title} className="kanvas-tile" style={{
               padding: "32px 28px",
-              borderRight: i % 3 !== 2 ? "1px solid rgba(34,211,238,0.08)" : "none",
-              borderBottom: i < 3 ? "1px solid rgba(34,211,238,0.08)" : "none",
               display: "flex", gap: 16, alignItems: "flex-start",
               transition: "background 0.2s",
             }}
