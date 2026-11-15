@@ -3,6 +3,7 @@ import Hero        from "@/components/Hero";
 import Process     from "@/components/Process";
 import Services    from "@/components/Services";
 import Platform    from "@/components/Platform";
+import Kanvas      from "@/components/Kanvas";
 import Credibility from "@/components/Credibility";
 import Engagement  from "@/components/Engagement";
 import TechStack   from "@/components/TechStack";
@@ -19,6 +20,7 @@ export default function Home() {
         <Process />
         <Services />
         <Platform />
+        <Kanvas />
         <Credibility />
         <Engagement />
         <TechStack />

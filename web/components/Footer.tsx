@@ -35,6 +35,13 @@ export default function Footer() {
                 onMouseLeave={e => (e.currentTarget.style.color = "#475569")}
               >{l}</a>
             ))}
+            <a href="#kanvas" style={{
+              display: "block", color: "#475569", fontSize: 13,
+              textDecoration: "none", marginBottom: 10, transition: "color 0.2s",
+            }}
+              onMouseEnter={e => (e.currentTarget.style.color = "#94a3b8")}
+              onMouseLeave={e => (e.currentTarget.style.color = "#475569")}
+            >Kanvas</a>
           </div>
 
           {/* Engage */}

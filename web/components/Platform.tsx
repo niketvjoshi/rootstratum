@@ -79,6 +79,22 @@ export default function Platform() {
           </p>
         </div>
 
+        {/* Product screenshot */}
+        <div style={{
+          maxWidth: 1040, marginBottom: 48,
+          border: "1px solid rgba(34,211,238,0.2)", borderRadius: 12, overflow: "hidden",
+          boxShadow: "0 24px 60px rgba(0,0,0,0.45)",
+        }}>
+          <img
+            src="/helios-dashboard.jpg"
+            alt="The Helios service summary for a demo checkout service, showing open issues, the last deployment, service levels and charts for response time, throughput, error rate and Apdex"
+            width={1456}
+            height={690}
+            loading="lazy"
+            style={{ display: "block", width: "100%", height: "auto" }}
+          />
+        </div>
+
         {/* Feature grid */}
         <div style={{
           display: "grid",
