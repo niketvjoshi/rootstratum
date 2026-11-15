@@ -42,6 +42,34 @@ const plans = [
     cta: "Start Conversation →",
     popular: true,
   },
+  {
+    emoji: "⏱️",
+    name: "Time & Materials",
+    meta: "Flexible scope · Billed monthly",
+    desc: "For work where scope will evolve. Engineers join your team and you pay for the hours actually worked, so priorities can change without renegotiating a contract.",
+    bullets: [
+      "Pay only for hours worked",
+      "Scope adapts as priorities change",
+      "Transparent timesheets and monthly invoices",
+      "Scale the team up or down at short notice",
+    ],
+    cta: "Discuss Your Needs →",
+    popular: false,
+  },
+  {
+    emoji: "🛡️",
+    name: "Managed Services",
+    meta: "Ongoing · SLA-backed",
+    desc: "We run your cloud for you. Monitoring, incident response, patching and cost control handled by our team, with agreed response times and regular reporting.",
+    bullets: [
+      "24/7 monitoring and incident response",
+      "Agreed SLAs and response times",
+      "Patching, upgrades and security hygiene",
+      "Monthly service and cost reports",
+    ],
+    cta: "Talk to Us →",
+    popular: false,
+  },
 ];
 
 export default function Engagement() {
@@ -62,7 +90,7 @@ export default function Engagement() {
           </p>
         </div>
 
-        <div className="grid-3" style={{ display: "grid", gap: 20 }}>
+        <div className="grid-plans" style={{ display: "grid", gap: 20 }}>
           {plans.map(p => (
             <div key={p.name} style={{
               background: p.popular ? "rgba(34,211,238,0.05)" : "rgba(14,19,38,0.8)",
